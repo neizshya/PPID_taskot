@@ -1,0 +1,297 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+body{
+    overflow-x: hidden;
+}
+.menu-button{
+    border-radius: 0.5rem;
+    border: 1px solid grey;
+    padding: 1rem;
+    &:hover {
+        outline: #130e17;
+        outline-style: solid;
+        outline-width: 2px;
+        transition: outline-color 0.1s ease, outline-width 0.1s ease;
+    }
+
+
+}
+.link-header {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+
+    &:hover {
+        color: #3076da;
+    }
+
+    &.actived {
+    border-bottom: 1px solid black;
+        &:hover{
+            color: #3076da;
+        }
+    }
+}
+.link-card-beranda {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+
+    &:hover {
+        color: #3076DA;
+    }
+
+
+}
+
+// Add a hover effect to dropdown items
+.dropdown-menu {
+    a.dropdown-item {
+        &:hover {
+            color: #3076da; // Change the color on hover
+        }
+    }
+}
+
+// Optionally, add a hover effect to the dropdown menu as well
+.dropdown {
+    &:hover {
+        .dropdown-menu {
+            display: block;
+        }
+    }
+}
+
+
+
+.carousel-height{
+        @media (min-width: map-get($grid-breakpoints, xs)) {
+        min-height: 32vh;
+    }
+        @media (min-width: map-get($grid-breakpoints, sm)) {
+        min-height: 35vh;
+    }
+        @media (min-width: map-get($grid-breakpoints, md)) {
+        min-height: 45vh;
+    }
+
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+        min-height: 60vh; // Adjust the min-height for screens with a minimum width of 1200px (xl breakpoint)
+    }
+
+    @media (min-width: map-get($grid-breakpoints, xl)) {
+        min-height: 70vh; // Adjust the min-height for screens with a minimum width of 1200px (xl breakpoint)
+    }
+    @media (min-width: map-get($grid-breakpoints, xxl)) {
+        min-height: 70vh; // Adjust the min-height for screens with a minimum width of 1200px (xl breakpoint)
+    }
+}
+.carousel-image-height{
+        @media (min-width: map-get($grid-breakpoints, xs)) {
+        max-height: 32vh;
+    }
+        @media (min-width: map-get($grid-breakpoints, sm)) {
+        max-height: 35vh;
+    }
+        @media (min-width: map-get($grid-breakpoints, md)) {
+        max-height: 45vh;
+    }
+
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+        max-height: 60vh; // Adjust the min-height for screens with a minimum width of 1200px (xl breakpoint)
+    }
+
+    @media (min-width: map-get($grid-breakpoints, xl)) {
+        max-height: 50vh; // Adjust the min-height for screens with a minimum width of 1200px (xl breakpoint)
+    }
+    @media (min-width: map-get($grid-breakpoints, xxl)) {
+        max-height: 70vh;
+    }
+}
+
+.news-card-hover {
+  transition: transform 0.5s ease;
+  &:hover{
+  transform: scale(1.03) translateZ(5px);
+
+  }
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.text-ellipsis {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+      overflow: hidden;
+      text-overflow: ellipsis;
+}
+.carousel-indicators [data-bs-target]{
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+
+.carousel .carousel-indicators button {
+   width: 20px;
+   height: 20px;
+   border-radius: 100%;
+
+ }
+
+/* Change the color of the active indicator */
+.carousel-indicators .active {
+  background-color: #1947AB; /* Replace with your desired color */
+}
+
+/* Change the color of the inactive indicators */
+.carousel-indicators li {
+  background-color: #F6F7F7; /* Replace with your desired color */
+}
+.hovered-pengumuman {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 0;
+        background-color: black;
+        transition: height 0.5s ease;
+    }
+
+    &:hover::before {
+        height: 100%;
+    }
+
+    .btn-pill{
+        border: none;
+    border-radius: 50px; /* Creates a pill shape */
+    padding: 10px;
+    background-color: gray;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+    }
+    &:hover {
+        .btn-pill{
+        background-color: black;
+        color: white;
+        }
+    }
+}
+.btn-pengumuman{
+    background-color: #1d3263;
+    color: white;
+}
+
+.link-hover{
+    color: black;
+    &:hover{
+        color: #486bbc;
+    }
+}
+.special-input {
+    background-color: transparent;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+border-bottom: 1px solid white;
+    &::placeholder {
+        color: white;
+        text-transform: capitalize;
+
+    }
+    &:focus{
+    border-bottom: 3px solid white;
+    outline: none;
+    }
+}
+
+
+
+.input-wrapper {
+  position: relative;
+  margin-top: 30px;
+  margin-inline: auto;
+}
+
+.input,
+.textarea {
+  font-size: 20px;
+  width: 100%;
+  padding: 8px 0;
+  padding-right: 30px;
+  color: white;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  transition: border-color 250ms;
+  background-color: transparent;
+  resize: vertical; /* Allow vertical resizing for textarea */
+
+  &:focus {
+    outline: none;
+    border-bottom-color: #777;
+  }
+
+  &::placeholder {
+    color: transparent;
+  }
+}
+
+.label {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  color: white;
+  pointer-events: none;
+  transform-origin: left center;
+  transition: transform 250ms;
+}
+
+.clear {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+  top: 50%;
+  right: -9px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  color: white;
+  transition: color 250ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover,
+  &:focus {
+    color: #333;
+  }
+}
+
+.input:placeholder-shown + .label,
+.textarea:placeholder-shown + .label {
+  transform: translateY(0) scale(1);
+  transition: transform 250ms;
+}
+
+.input:focus + .label,
+.input:not(:placeholder-shown) + .label,
+.textarea:focus + .label,
+.textarea:not(:placeholder-shown) + .label {
+  transform: translateY(-100%) scale(0.75);
+}
