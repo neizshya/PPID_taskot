@@ -70,6 +70,9 @@ Route::get('/search', function () {
 Route::get('/dashboard', function () {
     return view('frontend.dashboard.main.main');
 });
+Route::get('/caraousel', function () {
+    return view('frontend.dashboard.caraousel.caraousel');
+});
 
 // Route::get('/', function () {
 //     return view('welcome');
