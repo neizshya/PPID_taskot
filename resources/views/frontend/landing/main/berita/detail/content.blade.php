@@ -10,7 +10,7 @@
                 <img class="img-fluid rounded-3"
                     src="https://images.freeimages.com/images/large-previews/aed/three-bees-on-sunflower-1337029.jpg"
                     alt=""> <br>
-                <small class="text-secondary fs-6 fw">Foto : Lebah</small>
+                <small class="text-white fs-6 fw">Foto : Lebah</small>
             </div>
             <div class="col-12 fs-5 card bg-white p-3">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut commodo et ligula nec rutrum.
