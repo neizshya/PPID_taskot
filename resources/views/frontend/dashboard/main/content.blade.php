@@ -163,6 +163,4 @@
 
 
     </div>
-
-    </main>
 @endsection

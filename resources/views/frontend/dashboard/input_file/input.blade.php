@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Caraousel | PPID Kota Tasikmalaya</title>
+    <title>Input File | PPID Kota Tasikmalaya</title>
     <link rel="shortcut icon" type="image/png" href="{{ asset('image/logo_tasik.svg') }}">
 
 
@@ -17,7 +17,9 @@
 
 
 <body class="g-sidenav-show" style="background-color: #f8f9fa;">
-    @include('frontend.dashboard.caraousel.content')
+    @include('frontend.dashboard.input_file.content')
+
+
     <aside
         class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 ps ps--active-y bg-white"
         id="sidenav-main" data-color="dark">
@@ -65,7 +67,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  active" href="/caraousel">
+                    <a class="nav-link " href="/caraousel">
                         <div
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <svg class="text-dark" width="16px" height="16px" viewBox="0 0 42 42" version="1.1"
@@ -93,7 +95,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="/input_file">
+                    <a class="nav-link active" href="/input_file">
                         <div
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <svg class="text-dark" width="16px" height="16px" viewBox="0 0 40 44" version="1.1"
@@ -236,12 +238,13 @@
         </div>
 
     </aside>
+
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ps ps--active-y"
         style="min-height: 80vh">
         <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4  border-radius-xl py-3 bg-white mt-3 shadow"
             id="navbarBlur" navbar-scroll="true">
             <div class="container-fluid py-1 px-3 d-flex justify-content-between align-items-center">
-                <h6 class="font-weight-bolder mb-0 fs-3">Caraousel </h6>
+                <h6 class="font-weight-bolder mb-0 fs-3">Input File</h6>
                 <ul class="navbar-nav">
                     <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
                         <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">

@@ -73,6 +73,12 @@ Route::get('/dashboard', function () {
 Route::get('/caraousel', function () {
     return view('frontend.dashboard.caraousel.caraousel');
 });
+Route::get('/input_file', function () {
+    return view('frontend.dashboard.input_file.input');
+});
+Route::get('/permohonan_informasi_dashboard', function () {
+    return view('frontend.dashboard.permohonan_informasi.permohonan_informasi');
+});
 
 // Route::get('/', function () {
 //     return view('welcome');
