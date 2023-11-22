@@ -106,25 +106,47 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="col-12 ">
-                            <div class="input-wrapper">
-                                <textarea required autocomplete="off" class="textarea" name="peroleh_informasi" id="peroleh_informasi"
-                                    placeholder="Cara Memperoleh Informasi"></textarea>
-                                <label class="label" for="peroleh_informasi">
-                                    Cara Memperoleh Informasi
-                                    <span class="text-danger">*</span>
-                                </label>
+                        <div class="col-12 text-white">
+                            <p class="text-capitalize"> cara memperoleh informasi</p>
+                            <div class="ps-4">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="cara_memperoleh"
+                                        id="langsung_cara_memperoleh" value="langsung" required>
+                                    <label class="form-check-label" for="langsung_cara_memperoleh">Langsung</label>
+                                </div>
+                                <div class="form-check form-check-inline ms-2">
+                                    <input class="form-check-input" type="radio" name="cara_memperoleh"
+                                        id="email_cara_memperoleh" value="email">
+                                    <label class="form-check-label" for="email_cara_memperoleh">Email</label>
+                                </div>
+                                <div class="form-check form-check-inline ms-2">
+                                    <input class="form-check-input" type="radio" name="cara_memperoleh"
+                                        id="whatsapp_cara_memperoleh" value="whatsapp">
+                                    <label class="form-check-label" for="whatsapp_cara_memperoleh">Whatsapp</label>
+                                </div>
                             </div>
+
                         </div>
-                        <div class="col-12 ">
-                            <div class="input-wrapper">
-                                <textarea required autocomplete="off" class="textarea" name="kirim_informasi" id="kirim_informasi"
-                                    placeholder="Cara Mengirimkan Informasi"></textarea>
-                                <label class="label" for="kirim_informasi">
-                                    Cara Mengirimkan Informasi
-                                    <span class="text-danger">*</span>
-                                </label>
+                        <div class="col-12 text-white">
+                            <p class="text-capitalize"> cara mengirimkan informasi</p>
+                            <div class="ps-4">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="cara_mengirimkan"
+                                        id="langsung_cara_mengirimkan" value="langsung" required>
+                                    <label class="form-check-label" for="langsung_cara_mengirimkan">Langsung</label>
+                                </div>
+                                <div class="form-check form-check-inline ms-2">
+                                    <input class="form-check-input" type="radio" name="cara_mengirimkan"
+                                        id="email_cara_mengirimkan" value="email">
+                                    <label class="form-check-label" for="email_cara_mengirimkan">Email</label>
+                                </div>
+                                <div class="form-check form-check-inline ms-2">
+                                    <input class="form-check-input" type="radio" name="cara_mengirimkan"
+                                        id="whatsapp_cara_mengirimkan" value="whatsapp">
+                                    <label class="form-check-label" for="whatsapp_cara_mengirimkan">Whatsapp</label>
+                                </div>
                             </div>
+
                         </div>
                         <div class="col-12  my-3">
                             <label for="identitas" class="form-label text-white">Identitas(KTP/SIM) Ukuran maksimal 300kb

@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+use App\Http\Controllers\dashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -73,13 +75,14 @@ Route::get('/dashboard', function () {
 Route::get('/caraousel', function () {
     return view('frontend.dashboard.caraousel.caraousel');
 });
+Route::get('/ppid_pembantu_dashboard', function () {
+    return view('frontend.dashboard.ppid_pembantu.ppid_pembantu');
+});
 Route::get('/input_file', function () {
     return view('frontend.dashboard.input_file.input');
 });
-Route::get('/permohonan_informasi_dashboard', function () {
-    return view('frontend.dashboard.permohonan_informasi.permohonan_informasi');
-});
-
-// Route::get('/', function () {
-//     return view('welcome');
+// Route::get('/permohonan_informasi_dashboard', function () {
+//     return view('frontend.dashboard.permohonan_informasi.permohonan_informasi');
 // });
+Route::get('/permohonan_informasi_dashboard', [dashboardController::class, 'permohonan_informasi']);
+Route::get('/permohonan_keberatan_dashboard', [dashboardController::class, 'permohonan_keberatan']);

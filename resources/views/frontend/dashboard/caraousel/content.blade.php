@@ -84,14 +84,14 @@
 
     {{-- konten --}}
     <div class="container-fluid p-4 d-flex justify-content-center">
-        <div class=" card p-3 bg-white w-100 table-responsive">
+        <div class=" card p-3 bg-white w-100 table-responsive min-vh-80">
             <div class="text-end">
                 <button class="btn btn-success w-25 " data-bs-toggle="modal" data-bs-target="#add_pic">Tambah
                 </button>
             </div>
             <table class="table rounded-3 overflow-hidden table-borderless">
                 <thead>
-                    <tr class="table-light">
+                    <tr class="">
                         <th class="text-center" scope="col">No</th>
                         <th class="text-center" scope="col">Nama Gambar</th>
                         <th class="text-center" scope="col">Keterangan</th>
@@ -101,12 +101,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="table-light">
+                    <tr class="">
                         <th class="text-center" scope="row">1</th>
                         <td class="text-center">Nama1</td>
                         <td class="text-center">Keterangan 1 </td>
                         <td class="d-flex justify-content-center">
-                            <div class="rounded-3 overflow-hidden" style="width: 250px; height: 250px;">
+                            <div class="rounded-3 overflow-hidden" style="width: 150px; height: 150px;">
                                 <img class="w-100 h-100 img-responsive"
                                     src="https://avatars.akamai.steamstatic.com/fab9f6e14530bb7ab8f259edfab656b97d6111e2_full.jpg"
                                     alt="">

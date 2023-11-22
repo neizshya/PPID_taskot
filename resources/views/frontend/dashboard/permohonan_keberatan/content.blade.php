@@ -79,7 +79,7 @@
 
     <div class="container-fluid p-4 ">
 
-        <div class="card mb-4">
+        <div class="card mb-4 ">
             <div class="card-body px-0 pt-0 pb-2">
                 <div class="table-responsive p-3 min-vh-70">
                     <table class="table  align-items-center mb-0">
@@ -90,30 +90,22 @@
                                 </th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
                                     scope="col">
-                                    Tipe Pemohon</th>
+                                    Nomor Pendaftaran</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
                                     scope="col">
-                                    Nama Pemohon / Nama Badan Hukum / Nama Kelompok Orang</th>
+                                    Informasi yang dimohonkan</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
-                                    scope="col">No
-                                    KTP/SIM</th>
+                                    scope="col">Tujuan Penggunaan Informasi</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
                                     scope="col">
-                                    NIM
+                                    Nama Pemohon
                                 </th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
-                                    scope="col">
-                                    Perguruan Tinggi</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
                                     scope="col">
                                     Alamat Pemohon</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
                                     scope="col">
-                                    Pekerjaan</th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
-                                    scope="col">
-                                    No
-                                    Telepon/HP</th>
+                                    No Telepon/HP</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
                                     scope="col">
                                     E-mail</th>
@@ -125,22 +117,18 @@
                                     Alasan Permintaan Informasi</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
                                     scope="col">
-                                    Cara
-                                    Memperoleh Informasi</th>
+                                    Cara Memperoleh Informasi</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+                                    scope="col">
+                                    Cara Mengirim Informasi</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+                                    scope="col">
+                                    File Identitas</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
                                     scope="col">
                                     Cara
                                     Mengirim Informasi</th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
-                                    scope="col">
-                                    File
-                                    Identitas</th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
-                                    scope="col">
-                                    Surat Kuasa / Akta Pendirian</th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
-                                    scope="col">
-                                    Nomor Registrasi</th>
+
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
                                     scope="col">
                                     Status</th>
@@ -171,9 +159,7 @@
                                 <td class="align-middle text-center text-sm">Keterangan 1 </td>
                                 <td class="align-middle text-center text-sm">Keterangan 1 </td>
                                 <td class="align-middle text-center text-sm">Keterangan 1 </td>
-                                <td class="align-middle text-center text-sm">Keterangan 1 </td>
-                                <td class="align-middle text-center text-sm">Keterangan 1 </td>
-                                <td class="align-middle text-center text-sm">Keterangan 1 </td>
+
                                 <td class="align-middle text-center text-sm">68401507550asdasd+46</td>
 
                                 <td class="align-middle text-center text-sm">
@@ -290,10 +276,10 @@
                 </div>
             </div>
         </div>
-        <div class="card mb-4">
+        <div class="card mb-4 ">
             <div class="card-body px-0 pt-0 pb-2">
                 <div class="table-responsive p-3 min-vh-70">
-                    <table class="table  align-items-center mb-0">
+                    <table class="table  align-items-center mb-0 h-100">
                         <thead>
                             <tr class="text-center">
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
@@ -301,27 +287,22 @@
                                 </th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
                                     scope="col">
-                                    Nama Pemohon / Nama Badan Hukum / Nama Kelompok Orang</th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
-                                    scope="col">No
-                                    KTP/SIM</th>
+                                    Nomor Pendaftaran</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
                                     scope="col">
-                                    NIM
+                                    Informasi yang dimohonkan</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+                                    scope="col">Tujuan Penggunaan Informasi</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+                                    scope="col">
+                                    Nama Pemohon
                                 </th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
-                                    scope="col">
-                                    Perguruan Tinggi</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
                                     scope="col">
                                     Alamat Pemohon</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
                                     scope="col">
-                                    Pekerjaan</th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
-                                    scope="col">
-                                    No
-                                    Telepon/HP</th>
+                                    No Telepon/HP</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
                                     scope="col">
                                     E-mail</th>
@@ -333,22 +314,23 @@
                                     Alasan Permintaan Informasi</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
                                     scope="col">
-                                    Cara
-                                    Memperoleh Informasi</th>
+                                    Cara Memperoleh Informasi</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+                                    scope="col">
+                                    Cara Mengirim Informasi</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+                                    scope="col">
+                                    File Identitas</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
                                     scope="col">
                                     Cara
                                     Mengirim Informasi</th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
-                                    scope="col">
-                                    File
-                                    Identitas</th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
-                                    scope="col">
-                                    Nomor Registrasi</th>
+
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
                                     scope="col">
                                     Status</th>
+
+
 
 
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
@@ -373,7 +355,7 @@
                                 <td class="align-middle text-center text-sm">Keterangan 1 </td>
                                 <td class="align-middle text-center text-sm">Keterangan 1 </td>
                                 <td class="align-middle text-center text-sm">Keterangan 1 </td>
-                                <td class="align-middle text-center text-sm">Keterangan 1 </td>
+
                                 <td class="align-middle text-center text-sm">
                                     <span class="badge badge-sm bg-gradient-success p-2">Diterima</span>
                                     <span class="badge badge-sm bg-gradient-danger p-2">Ditolak</span>
@@ -396,7 +378,7 @@
             </div>
             <div class="card-footer">
                 <nav aria-label="Page navigation example">
-                    <ul class="pagination pagination-secondary justify-content-end">
+                    <ul class="pagination pagination-secondary justify-content-end ">
                         <li class="page-item">
                             <a class="page-link" href="#" aria-label="Previous">
                                 <span aria-hidden="true">&laquo;</span>
