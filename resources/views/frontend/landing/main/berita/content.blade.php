@@ -95,8 +95,17 @@
 
                 </div>
             </div>
-            <div class="col-12 d-flex justify-content-center">
-                <button class="btn btn-danger w-50 p-2 rounded-3 fs-5" type="button" name="muat_baru">Muat Baru</button>
+
+            <div class="col-12 d-flex justify-content-end ">
+                <nav aria-label="Page navigation example ">
+                    <ul class="pagination" data-bs-theme="dark">
+                        <li class="page-item "><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>

@@ -12,7 +12,7 @@
                         <p class="fs-1 fw-semibold"> Pengumuman</p>
                     </div>
                     {{-- konten pengumuman --}}
-                    <div class="col-12 mt-3 border-bottom py-3 border-1 hovered-pengumuman">
+                    <div class="col-12 mt-3 border-bottom py-3 border-1 hovered-pengumuman" name="pengumuman">
                         <div class="row w-100 ">
                             <div class="col-12 col-lg-2 ">
                                 <p class="fs-5 text-capitalize fw-semibold text-ellipsis"> 24 Oktober 2205</p>
@@ -36,7 +36,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 mt-3 border-bottom py-3 border-1 hovered-pengumuman">
+                    <div class="col-12 mt-3 border-bottom py-3 border-1 hovered-pengumuman" name="pengumuman">
                         <div class="row w-100 ">
                             <div class="col-12 col-lg-2 ">
                                 <p class="fs-5 text-capitalize fw-semibold text-ellipsis"> 24 Oktober 2205</p>
@@ -60,7 +60,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 mt-3 border-bottom py-3 border-1 hovered-pengumuman">
+                    <div class="col-12 mt-3 border-bottom py-3 border-1 hovered-pengumuman" name="pengumuman">
                         <div class="row w-100 ">
                             <div class="col-12 col-lg-2 ">
                                 <p class="fs-5 text-capitalize fw-semibold text-ellipsis"> 24 Oktober 2205</p>
@@ -84,7 +84,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 mt-3 border-bottom py-3 border-1 hovered-pengumuman">
+                    <div class="col-12 mt-3 border-bottom py-3 border-1 hovered-pengumuman" name="pengumuman">
                         <div class="row w-100 ">
                             <div class="col-12 col-lg-2 ">
                                 <p class="fs-5 text-capitalize fw-semibold text-ellipsis"> 24 Oktober 2205</p>
@@ -108,7 +108,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 mt-3 border-bottom py-3 border-1 hovered-pengumuman">
+                    <div class="col-12 mt-3 border-bottom py-3 border-1 hovered-pengumuman" name="pengumuman">
                         <div class="row w-100 ">
                             <div class="col-12 col-lg-2 ">
                                 <p class="fs-5 text-capitalize fw-semibold text-ellipsis"> 24 Oktober 2205</p>
@@ -132,11 +132,134 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-12 mt-3 border-bottom py-3 border-1 hovered-pengumuman" name="pengumuman">
+                        <div class="row w-100 ">
+                            <div class="col-12 col-lg-2 ">
+                                <p class="fs-5 text-capitalize fw-semibold text-ellipsis"> 24 Oktober 2205</p>
+                            </div>
+                            <div class="col-12 col-lg-7 ">
+                                <div class="w-75">
+                                    <p class="fs-6 text-capitalize fw-bold link-dark text-decoration-none text-ellipsis">
+                                        nama
+                                        pengumuman
+                                        Lorem
+                                        ipsum dolor, sit amet
+                                        consectetur
+                                        adipisicing elit. Dignissimos, repellat provident, praesentium, iure optio doloribus
+                                        sapiente distinctio eligendi nemo dolor ad recusandae? Eligendi assumenda quo modi
+                                        voluptatum nihil ea natus.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center d-lg-block col-lg-3 text-end">
+                                <a class="btn-pill text-decoration-none stretched-link"
+                                    href="/pengumuman/detail">Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-3 border-bottom py-3 border-1 hovered-pengumuman" name="pengumuman">
+                        <div class="row w-100 ">
+                            <div class="col-12 col-lg-2 ">
+                                <p class="fs-5 text-capitalize fw-semibold text-ellipsis"> 24 Oktober 2205</p>
+                            </div>
+                            <div class="col-12 col-lg-7 ">
+                                <div class="w-75">
+                                    <p class="fs-6 text-capitalize fw-bold link-dark text-decoration-none text-ellipsis">
+                                        nama
+                                        pengumuman
+                                        Lorem
+                                        ipsum dolor, sit amet
+                                        consectetur
+                                        adipisicing elit. Dignissimos, repellat provident, praesentium, iure optio doloribus
+                                        sapiente distinctio eligendi nemo dolor ad recusandae? Eligendi assumenda quo modi
+                                        voluptatum nihil ea natus.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center d-lg-block col-lg-3 text-end">
+                                <a class="btn-pill text-decoration-none stretched-link"
+                                    href="/pengumuman/detail">Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-3 border-bottom py-3 border-1 hovered-pengumuman" name="pengumuman">
+                        <div class="row w-100 ">
+                            <div class="col-12 col-lg-2 ">
+                                <p class="fs-5 text-capitalize fw-semibold text-ellipsis"> 24 Oktober 2205</p>
+                            </div>
+                            <div class="col-12 col-lg-7 ">
+                                <div class="w-75">
+                                    <p class="fs-6 text-capitalize fw-bold link-dark text-decoration-none text-ellipsis">
+                                        nama
+                                        pengumuman
+                                        Lorem
+                                        ipsum dolor, sit amet
+                                        consectetur
+                                        adipisicing elit. Dignissimos, repellat provident, praesentium, iure optio doloribus
+                                        sapiente distinctio eligendi nemo dolor ad recusandae? Eligendi assumenda quo modi
+                                        voluptatum nihil ea natus.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center d-lg-block col-lg-3 text-end">
+                                <a class="btn-pill text-decoration-none stretched-link"
+                                    href="/pengumuman/detail">Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-3 border-bottom py-3 border-1 hovered-pengumuman" name="pengumuman">
+                        <div class="row w-100 ">
+                            <div class="col-12 col-lg-2 ">
+                                <p class="fs-5 text-capitalize fw-semibold text-ellipsis"> 24 Oktober 2205</p>
+                            </div>
+                            <div class="col-12 col-lg-7 ">
+                                <div class="w-75">
+                                    <p class="fs-6 text-capitalize fw-bold link-dark text-decoration-none text-ellipsis">
+                                        nama
+                                        pengumuman
+                                        Lorem
+                                        ipsum dolor, sit amet
+                                        consectetur
+                                        adipisicing elit. Dignissimos, repellat provident, praesentium, iure optio doloribus
+                                        sapiente distinctio eligendi nemo dolor ad recusandae? Eligendi assumenda quo modi
+                                        voluptatum nihil ea natus.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center d-lg-block col-lg-3 text-end">
+                                <a class="btn-pill text-decoration-none stretched-link"
+                                    href="/pengumuman/detail">Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-3 border-bottom py-3 border-1 hovered-pengumuman" name="pengumuman">
+                        <div class="row w-100 ">
+                            <div class="col-12 col-lg-2 ">
+                                <p class="fs-5 text-capitalize fw-semibold text-ellipsis"> 24 Oktober 2205</p>
+                            </div>
+                            <div class="col-12 col-lg-7 ">
+                                <div class="w-75">
+                                    <p class="fs-6 text-capitalize fw-bold link-dark text-decoration-none text-ellipsis">
+                                        nama
+                                        pengumuman
+                                        Lorem
+                                        ipsum dolor, sit amet
+                                        consectetur
+                                        adipisicing elit. Dignissimos, repellat provident, praesentium, iure optio doloribus
+                                        sapiente distinctio eligendi nemo dolor ad recusandae? Eligendi assumenda quo modi
+                                        voluptatum nihil ea natus.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center d-lg-block col-lg-3 text-end">
+                                <a class="btn-pill text-decoration-none stretched-link"
+                                    href="/pengumuman/detail">Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+
 
 
                 </div>
             </div>
-
+            <div class="card-footer bg-white border-0 text-center" name="muat_baru">
+                <button class="btn btn-danger text-capitalize w-50">Muat Baru</button>
+            </div>
         </div>
     </div>
 @endsection

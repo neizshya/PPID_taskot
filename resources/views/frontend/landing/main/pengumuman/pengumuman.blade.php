@@ -45,7 +45,23 @@
         });
     </script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the total number of news articles
+            var totalBerita = document.querySelectorAll('[name="pengumuman"]').length;
 
+            var muatBaruButton = document.querySelector('[name="muat_baru"]');
+
+            // Check if there are 10 or more news articles
+            if (totalBerita >= 10) {
+                // Show the "Muat Baru" button
+                muatBaruButton.style.display = 'block';
+            } else {
+                // Hide the "Muat Baru" button
+                muatBaruButton.style.display = 'none';
+            }
+        });
+    </script>
 
 
 
