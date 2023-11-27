@@ -13,17 +13,25 @@
         <div class="carousel-inner">
             <div class="carousel-item carousel-image-height active">
                 <img src="https://cdn.pixabay.com/photo/2023/10/21/18/47/boat-8332114_1280.jpg"
-                    class="d-block mx-auto w-100 h-100 object-fit-cover" alt="...">
+                    class="d-block mx-auto w-100 h-100 object-fit-fill" alt="...">
             </div>
             <div class="carousel-item carousel-image-height">
                 <img src="https://media.istockphoto.com/id/1258157315/id/foto/open-water-fun.webp?s=2048x2048&w=is&k=20&c=svi-56t3NpBknqQxg-xZNko56xknAb_IMPc9WdlASyY="
-                    class="d-block mx-auto w-100 h-100 object-fit-cover" alt="...">
+                    class="d-block mx-auto w-100 h-100 object-fit-fill" alt="...">
             </div>
             <div class="carousel-item carousel-image-height">
                 <img src="https://media.istockphoto.com/id/1211025104/id/foto/pace-picnic-island-miami-biscayne-bay.webp?s=2048x2048&w=is&k=20&c=GCpJlYos-XQFbxfgJfzU1HqJZYVt0yRjqn2KHkGma-I="
-                    class="d-block mx-auto w-100 h-100 object-fit-cover" alt="...">
+                    class="d-block mx-auto w-100 h-100 object-fit-fill" alt="...">
             </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-beranda" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel-beranda" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 
 
@@ -128,7 +136,8 @@
                             <img src="https://portal.tasikmalayakota.go.id/assets/uploads/SHB1r_1698899497_katasik-4.jpg"
                                 class="rounded-2 w-100 " alt="...">
                             <div class="card-body ">
-                                <h6 class="card-subtitle mb-2 text-body-secondary">Rabu, 20 Oktober 2021 | Nama Penulis</h6>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">Rabu, 20 Oktober 2021 | Nama Penulis
+                                </h6>
                                 <p class="card-title fs-3">Judul Berita</p>
                                 <p class="card-text text-ellipsis">preview berita Lorem ipsum dolor sit amet
                                     consectetur,adipisicing elit. Eius perferendis velit expedita natus, qui, minima libero

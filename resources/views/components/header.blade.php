@@ -87,8 +87,7 @@
 
     </div>
 
-    <header
-        class="sticky-top row py-3 d-flex  justify-content-xl-evenly align-content-center  border-bottom px-5 bg-white shadow">
+    <header class="sticky-top py-3   border-bottom px-5 bg-white shadow">
         <div class="row">
             <div class="col-1 text-start col-lg-1 mb-2 mb-md-0">
                 <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
@@ -97,7 +96,7 @@
             </div>
 
             {{-- search bar --}}
-            <form action="" class="d-none d-xl-block col-4 align-self-center  text-center  ">
+            <form action="" class="d-none d-xxl-block col-4 align-self-center  text-center  ">
                 <div class="input-group">
                     <input class="form-control border-end-0 border-dark rounded-start-pill bg-white floatingInput"
                         type="text" placeholder="Cari Dokumen" id="searchbar-header">
@@ -112,7 +111,7 @@
                     </span>
                 </div>
             </form>
-            <div class="d-none  d-xl-block col-md-auto col-12 mb-2 mb-md-0 ms-auto">
+            <div class="d-none  d-xxl-block col-md-auto col-12 mb-2 mb-md-0 ms-auto">
                 <ul class=" nav ">
                     <li class="nav-item "><a href="#"
                             class="nav-link px-2 link-header rounded-0 {{ request()->is('/') ? 'actived' : '' }}">Beranda</a>
@@ -168,7 +167,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-11 text-end d-xl-none">
+            <div class="col-11 text-end d-xxl-none align-self-center">
                 <button class="navbar-toggler menu-button" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#navbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <i class="bi bi-list"></i>
