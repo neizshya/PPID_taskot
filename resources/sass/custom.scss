@@ -104,11 +104,11 @@ body{
     }
 
     @media (min-width: map-get($grid-breakpoints, lg)) {
-        max-height: 60vh; // Adjust the min-height for screens with a minimum width of 1200px (xl breakpoint)
+        max-height: 60vh;
     }
 
     @media (min-width: map-get($grid-breakpoints, xl)) {
-        max-height: 50vh; // Adjust the min-height for screens with a minimum width of 1200px (xl breakpoint)
+        max-height: 70vh;
     }
     @media (min-width: map-get($grid-breakpoints, xxl)) {
         max-height: 70vh;
@@ -326,4 +326,63 @@ border-bottom: 1px solid white;
     border: 1px solid black;
     border-radius: 50%;
   }
+}
+/* Define variables if needed */
+$checkbox-size: 20px;
+$checkbox-border-color: #707070;
+$checkbox-check-color: #000;
+
+/* Override Bootstrap styles for checkboxes */
+.form-check {
+    padding-left: 0; /* Remove default padding */
+}
+
+.form-check-input {
+    margin-top: 2px; /* Adjust vertical alignment */
+}
+
+/* Custom styles for checkboxes */
+.custom-checkbox {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    margin-bottom: 12px;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: $checkbox-size;
+        width: $checkbox-size;
+        background-color: #fff;
+        border: 1px solid $checkbox-border-color;
+        border-radius: 4px;
+    }
+
+    /* Hide the default checkbox */
+    input:checked ~ .checkmark:after {
+        display: block;
+    }
+
+    /* Show a checkmark when the checkbox is checked */
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 6px;
+        top: 2px;
+        width: 7px;
+        height: 13px;
+        border: solid $checkbox-check-color;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+    }
 }

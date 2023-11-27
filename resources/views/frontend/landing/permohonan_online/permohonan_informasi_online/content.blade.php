@@ -8,128 +8,26 @@
         <form action="" class="row w-100">
             <div class="row">
                 <div class="col-12 col-lg-8">
-                    <div class="row">
+                    <div class="col-12 text-white">
+                        <p>Tipe Pemohon</p>
+                        <input type="radio" class="btn-check" name="tipe-pemohon" id="perorangan" autocomplete="off"
+                            value="perorangan" checked>
+                        <label class="btn btn-outline-light" for="perorangan">Perorangan</label>
+
+                        <input type="radio" class="btn-check" name="tipe-pemohon" id="kelompok_masyarakat"
+                            value="kelompok_masyarakat" autocomplete="off">
+                        <label class="btn btn-outline-light" for="kelompok_masyarakat">Kelompok Masyarakat</label>
+
+                        <input type="radio" class="btn-check" name="tipe-pemohon" id="pemohon_berbadan_hukum"
+                            value="pemohon_berbadan_hukum" autocomplete="off">
+                        <label class="btn btn-outline-light" for="pemohon_berbadan_hukum">Pemohon Berbadan
+                            Hukum</label>
+
+
+                    </div>
+                    <div class="row g-2" id="form-inputs">
                         {{-- input --}}
-                        <div class="col-12">
-                            <div class="input-wrapper">
-                                <input autocomplete="off" class="input" type="text" id="nama_pemohon" required
-                                    placeholder="nama pemohon" />
-                                <label class="label" for="nama_pemohon">
-                                    Nama Pemohon <span class="text-danger">*</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                            <div class="input-wrapper">
-                                <input autocomplete="off" class="input" type="text" id="ktp_sim" required
-                                    placeholder="No KTP/SIM" />
-                                <label class="label" for="ktp_sim">
-                                    No KTP/SIM <span class="text-danger">*</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                            <div class="input-wrapper">
-                                <input autocomplete="off" class="input" type="text" id="nim"
-                                    placeholder="NIM (Jika Pemohon adalah Mahasiswa)" />
-                                <label class="label" for="nim">
-                                    NIM (Jika Pemohon adalah Mahasiswa) <span class="text-danger">*</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="input-wrapper">
-                                <input autocomplete="off" class="input" type="text" id="univ"
-                                    placeholder="Perguruan Tinggi (Jika Pemohon adalah Mahasiswa)" />
-                                <label class="label" for="univ">
-                                    Perguruan Tinggi (Jika Pemohon adalah Mahasiswa) <span class="text-danger">*</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="input-wrapper">
-                                <input autocomplete="off" class="input" type="text" id="alamat"
-                                    placeholder="Alamat Pemohon" />
-                                <label class="label" for="alamat">
-                                    Alamat Pemohon <span class="text-danger">*</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="input-wrapper">
-                                <input autocomplete="off" class="input" type="text" id="pekerjaan" required
-                                    placeholder="Pekerjaan" />
-                                <label class="label" for="pekerjaan">
-                                    Pekerjaan <span class="text-danger">*</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                            <div class="input-wrapper">
-                                <input autocomplete="off" class="input" type="tel" id="no_hp" required
-                                    placeholder="No Telepon/HP" />
-                                <label class="label" for="no_hp">
-                                    No Telepon/HP <span class="text-danger">*</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                            <div class="input-wrapper">
-                                <input autocomplete="off" class="input" type="email" id="email" required
-                                    placeholder="E-mail" />
-                                <label class="label" for="no_hp">
-                                    E-mail <span class="text-danger">*</span>
-                                </label>
-                            </div>
-                        </div>
 
-
-                        <div class="col-12 ">
-                            <div class="input-wrapper">
-                                <textarea required autocomplete="off" class="textarea" name="informasi_dibutuhkan" id="informasi_dibutuhkan"
-                                    placeholder="Informasi Yang Dibutuhkan"></textarea>
-                                <label class="label" for="informasi_dibutuhkan">
-                                    Informasi Yang Dibutuhkan
-                                    <span class="text-danger">*</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-12 ">
-                            <div class="input-wrapper">
-                                <textarea required autocomplete="off" class="textarea" name="alasan_informasi" id="alasan_informasi"
-                                    placeholder="Alasan Permintaan Informasi"></textarea>
-                                <label class="label" for="alasan_informasi">
-                                    Alasan Permintaan Informasi
-                                    <span class="text-danger">*</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-12 ">
-                            <div class="input-wrapper">
-                                <textarea required autocomplete="off" class="textarea" name="peroleh_informasi" id="peroleh_informasi"
-                                    placeholder="Cara Memperoleh Informasi"></textarea>
-                                <label class="label" for="peroleh_informasi">
-                                    Cara Memperoleh Informasi
-                                    <span class="text-danger">*</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-12 ">
-                            <div class="input-wrapper">
-                                <textarea required autocomplete="off" class="textarea" name="kirim_informasi" id="kirim_informasi"
-                                    placeholder="Cara Mengirimkan Informasi"></textarea>
-                                <label class="label" for="kirim_informasi">
-                                    Cara Mengirimkan Informasi
-                                    <span class="text-danger">*</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-12  my-3">
-                            <label for="identitas" class="form-label text-white">Identitas(KTP/SIM) Ukuran maksimal 300kb
-                                <span class="text-danger">*</span></label>
-                            <input data-bs-theme="dark" class="form-control" type="file" id="identitas"
-                                accept=".jpg,.png,.pdf">
-                        </div>
                     </div>
                 </div>
                 {{-- text --}}
