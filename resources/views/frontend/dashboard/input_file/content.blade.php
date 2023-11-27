@@ -190,24 +190,11 @@
                         </div>
                     </form>
                     <div class="col-6 text-end">
-                        <button class="btn btn-success w-50" data-bs-toggle="modal" data-bs-target="#add_pic">Tambah
+                        <button class="btn btn-success w-lg-50" data-bs-toggle="modal" data-bs-target="#add_pic">Tambah
                         </button>
                     </div>
                 </div>
 
-                {{-- <div class="row">
-                <div class="col-6 text-start">
-                    <button class="btn btn-success w-50" data-bs-toggle="modal" data-bs-target="#add_pic">Tambah
-                        Instansi
-                    </button>
-
-                </div>
-                <div class="col-6 text-end">
-
-                    <button class="btn btn-success w-50" data-bs-toggle="modal" data-bs-target="#add_pic">Tambah File
-                    </button>
-                </div>
-            </div> --}}
                 <table class="table ">
                     <thead>
                         <tr class="">

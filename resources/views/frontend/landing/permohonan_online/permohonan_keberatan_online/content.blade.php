@@ -15,7 +15,7 @@
                                 <input autocomplete="off" class="input" type="text" id="nomor_pendaftaran" required
                                     placeholder="nomor pendaftaran" />
                                 <label class="label" for="nomor_pendaftaran">
-                                    Nomor Pendaftaran Permohonan Informasi (nomor sesuai tanda terima permohonan informasi)
+                                    Nomor Pendaftaran Permohonan Informasi
                                     <span class="text-danger">*</span>
                                 </label>
                             </div>
@@ -109,17 +109,17 @@
                         <div class="col-12 text-white">
                             <p class="text-capitalize"> cara memperoleh informasi</p>
                             <div class="ps-4">
-                                <div class="form-check form-check-inline">
+                                <div class="form-check ">
                                     <input class="form-check-input" type="radio" name="cara_memperoleh"
                                         id="langsung_cara_memperoleh" value="langsung" required>
                                     <label class="form-check-label" for="langsung_cara_memperoleh">Langsung</label>
                                 </div>
-                                <div class="form-check form-check-inline ms-2">
+                                <div class="form-check ">
                                     <input class="form-check-input" type="radio" name="cara_memperoleh"
                                         id="email_cara_memperoleh" value="email">
                                     <label class="form-check-label" for="email_cara_memperoleh">Email</label>
                                 </div>
-                                <div class="form-check form-check-inline ms-2">
+                                <div class="form-check ">
                                     <input class="form-check-input" type="radio" name="cara_memperoleh"
                                         id="whatsapp_cara_memperoleh" value="whatsapp">
                                     <label class="form-check-label" for="whatsapp_cara_memperoleh">Whatsapp</label>
@@ -130,23 +130,49 @@
                         <div class="col-12 text-white">
                             <p class="text-capitalize"> cara mengirimkan informasi</p>
                             <div class="ps-4">
-                                <div class="form-check form-check-inline">
+                                <div class="form-check ">
                                     <input class="form-check-input" type="radio" name="cara_mengirimkan"
                                         id="langsung_cara_mengirimkan" value="langsung" required>
                                     <label class="form-check-label" for="langsung_cara_mengirimkan">Langsung</label>
                                 </div>
-                                <div class="form-check form-check-inline ms-2">
+                                <div class="form-check ">
                                     <input class="form-check-input" type="radio" name="cara_mengirimkan"
                                         id="email_cara_mengirimkan" value="email">
                                     <label class="form-check-label" for="email_cara_mengirimkan">Email</label>
                                 </div>
-                                <div class="form-check form-check-inline ms-2">
+                                <div class="form-check ">
                                     <input class="form-check-input" type="radio" name="cara_mengirimkan"
                                         id="whatsapp_cara_mengirimkan" value="whatsapp">
                                     <label class="form-check-label" for="whatsapp_cara_mengirimkan">Whatsapp</label>
                                 </div>
                             </div>
 
+                        </div>
+                        {{-- Ganti Value jangan lupa --}}
+                        <div class="col-12 text-white mt-3">
+                            <label for="alasan" class="form-label text-white">Alasan Pengajuan Keberatan
+                                <span class="text-danger">*</span></label>
+                            <select class="form-select" name="alasan" aria-label="Default select example"
+                                data-bs-theme="dark" required>
+                                <option selected hidden>Pilih Alasan Pengajuan Keberatan</option>
+                                <option value="1">Permohonan informasi ditolak</option>
+                                <option value="2">Informasi berkala tidak disediakan</option>
+                                <option value="3">Permintaan informasi tidak ditanggapi</option>
+                                <option value="3">Permintaan informasi ditanggapi tidak sebagaimana yang diminta
+                                </option>
+                                <option value="3">Permintaan informasi tidak terpenuhi</option>
+                                <option value="3">Biaya yang dikenakan tidak wajar</option>
+                                <option value="3">Informasi disampaikan melebihi jangka waktu yang ditentukan</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <div class="input-wrapper">
+                                <input autocomplete="off" class="input" type="text" id="kasus_posisi"
+                                    name="kasus_posisi" required placeholder="Kasus Posisi" />
+                                <label class="label" for="kasus_posisi">
+                                    Kasus Posisi <span class="text-danger">*</span>
+                                </label>
+                            </div>
                         </div>
                         <div class="col-12  my-3">
                             <label for="identitas" class="form-label text-white">Identitas(KTP/SIM) Ukuran maksimal 300kb
@@ -208,7 +234,7 @@
                         </p>
 
                         <p>
-                            informasi yang disediakan adalah <span class="fw-semibold">gratis</span> (tidak dipungut
+                            Informasi yang disediakan adalah <span class="fw-semibold">gratis</span> (tidak dipungut
                             biaya),
                             jika ada penggandaan atau perekaman, biaya ditanggung oleh pemohon informasi.
                         </p>
