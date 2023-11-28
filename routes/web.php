@@ -81,6 +81,12 @@ Route::get('/ppid_pembantu_dashboard', function () {
 Route::get('/input_file', function () {
     return view('frontend.dashboard.input_file.input');
 });
+Route::get('/jenis_dokumen', function () {
+    return view('frontend.dashboard.jenis_dokumen_input.jenis_dokumen_input');
+});
+Route::get('/akun', function () {
+    return view('frontend.dashboard.akun.akun');
+});
 // Route::get('/permohonan_informasi_dashboard', function () {
 //     return view('frontend.dashboard.permohonan_informasi.permohonan_informasi');
 // });

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Permohonan Keberatan | PPID Kota Tasikmalaya</title>
+    <title>Jenis Dokumen | PPID Kota Tasikmalaya</title>
     <link rel="shortcut icon" type="image/png" href="{{ asset('image/logo_tasik.svg') }}">
 
 
@@ -13,27 +13,23 @@
     <link href="{{ asset('soft/assets/css/nucleo-svg.css') }}" rel="stylesheet" />
     <!-- CSS Files -->
     <link href="{{ asset('soft/assets/css/soft-ui-dashboard.css?v=1.0.7') }}" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 
 
 <body class="g-sidenav-show" style="background-color: #f8f9fa;">
-    @include('frontend.dashboard.permohonan_keberatan.content')
+    @include('frontend.dashboard.jenis_dokumen_input.content')
 
-    @include('components.dashboard_header')
     @include('components.dashboard_sidenav')
     @yield('sidenav_dashboard')
-
-
+    @include('components.dashboard_header')
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ps ps--active-y"
         style="min-height: 80vh">
         @yield('header_dashboard')
 
+
         @yield('content')
     </main>
 
-
-    {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}
 
     <script src="{{ asset('soft/assets/js/core/popper.min.js') }}"></script>
     <script src="{{ asset('soft/assets/js/core/bootstrap.min.js') }}"></script>
@@ -49,7 +45,6 @@
             Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
         }
     </script>
-
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script src="{{ asset('soft/assets/js/soft-ui-dashboard.min.js?v=1.0.7') }}"></script>
 
