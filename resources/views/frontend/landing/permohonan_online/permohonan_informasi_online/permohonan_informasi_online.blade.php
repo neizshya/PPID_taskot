@@ -18,7 +18,26 @@
     @include('components.modal.modal_login')
     @yield('modallogin')
     @yield('header')
+    <div class="modal fade " id="after_form" tabindex="-1" aria-labelledby="after_form" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-white">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Permohonan Berhasil Dikirim</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="fs-5">Hasil permohonan dapat dilihat di dashboard dengan NIK dan password menggunakan
+                        NIK yang telah dimasukan di form permohonan yang telah diisi sebelumnya</p>
 
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {{--
+        data-bs-toggle="modal"
+                            data-bs-target="#online_berkala"
+        --}}
     <main class="container-fluid" style="min-height: 80vh">
         @yield('content')
     </main>
