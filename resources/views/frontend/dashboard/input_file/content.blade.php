@@ -221,8 +221,8 @@
 
                                 <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#file">Lihat
                                     File</button>
-                                <button class="btn btn-warning" data-bs-toggle="modal" <button class="btn btn-warning"
-                                    data-bs-toggle="modal" data-bs-target="#edit_pic">Edit</button>
+                                <button class="btn btn-warning" data-bs-toggle="modal" data-bs-toggle="modal"
+                                    data-bs-target="#edit_pic">Edit</button>
                                 <button class="btn btn-danger" data-bs-toggle="modal"
                                     data-bs-target="#delete_pic">Hapus</button>
 
