@@ -7,6 +7,7 @@
     $ppid_pembantu = 'ppid_pembantu_dashboard';
     $jenis_dokumen = 'jenis_dokumen';
     $akun = '/url_dashbord';
+    $list_akun = 'list_akun';
 @endphp
 
 @section('header_dashboard')
@@ -28,7 +29,9 @@
                                         ? 'PPID Pembantu'
                                         : (request()->path() === $jenis_dokumen
                                             ? 'Jenis Dokumen'
-                                            : '')))))) }}
+                                            : (request()->path() === $list_akun
+                                                ? 'List Akun'
+                                                : ''))))))) }}
             </h6>
             <ul class="navbar-nav">
                 <li class="nav-item d-xl-none ps-3 d-flex align-items-center">

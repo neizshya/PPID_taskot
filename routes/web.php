@@ -87,6 +87,9 @@ Route::get('/jenis_dokumen', function () {
 Route::get('/akun', function () {
     return view('frontend.dashboard.akun.akun');
 });
+Route::get('/list_akun', function () {
+    return view('frontend.dashboard.list_akun.list_akun');
+});
 // Route::get('/permohonan_informasi_dashboard', function () {
 //     return view('frontend.dashboard.permohonan_informasi.permohonan_informasi');
 // });

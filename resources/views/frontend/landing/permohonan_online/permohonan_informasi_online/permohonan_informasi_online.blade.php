@@ -95,7 +95,7 @@
                                 <input autocomplete="off" class="input" type="text" id="nim"
                                     placeholder="NIM (Jika Pemohon adalah Mahasiswa)" />
                                 <label class="label" for="nim">
-                                    NIM (Jika Pemohon adalah Mahasiswa) <span class="text-danger">*</span>
+                                    NIM (Jika Pemohon adalah Mahasiswa)
                                 </label>
                             </div>
                         </div>
@@ -104,7 +104,7 @@
                                 <input autocomplete="off" class="input" type="text" id="univ"
                                     placeholder="Perguruan Tinggi (Jika Pemohon adalah Mahasiswa)" />
                                 <label class="label" for="univ">
-                                    Perguruan Tinggi (Jika Pemohon adalah Mahasiswa) <span class="text-danger">*</span>
+                                    Perguruan Tinggi (Jika Pemohon adalah Mahasiswa)
                                 </label>
                             </div>
                         </div>
@@ -239,7 +239,7 @@
                                 <input autocomplete="off" class="input" type="text" id="nim"
                                     placeholder="NIM (Jika Pemohon adalah Mahasiswa)" />
                                 <label class="label" for="nim">
-                                    NIM (Jika Pemohon adalah Mahasiswa) <span class="text-danger">*</span>
+                                    NIM (Jika Pemohon adalah Mahasiswa)
                                 </label>
                             </div>
                         </div>
@@ -248,7 +248,7 @@
                                 <input autocomplete="off" class="input" type="text" id="univ"
                                     placeholder="Perguruan Tinggi (Jika Pemohon adalah Mahasiswa)" />
                                 <label class="label" for="univ">
-                                    Perguruan Tinggi (Jika Pemohon adalah Mahasiswa) <span class="text-danger">*</span>
+                                    Perguruan Tinggi (Jika Pemohon adalah Mahasiswa)
                                 </label>
                             </div>
                         </div>
@@ -389,7 +389,7 @@
                                 <input autocomplete="off" class="input" type="text" id="nim"
                                     placeholder="NIM (Jika Pemohon adalah Mahasiswa)" />
                                 <label class="label" for="nim">
-                                    NIM (Jika Pemohon adalah Mahasiswa) <span class="text-danger">*</span>
+                                    NIM (Jika Pemohon adalah Mahasiswa)
                                 </label>
                             </div>
                         </div>
@@ -398,7 +398,7 @@
                                 <input autocomplete="off" class="input" type="text" id="univ"
                                     placeholder="Perguruan Tinggi (Jika Pemohon adalah Mahasiswa)" />
                                 <label class="label" for="univ">
-                                    Perguruan Tinggi (Jika Pemohon adalah Mahasiswa) <span class="text-danger">*</span>
+                                    Perguruan Tinggi (Jika Pemohon adalah Mahasiswa)
                                 </label>
                             </div>
                         </div>
