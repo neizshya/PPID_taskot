@@ -15,25 +15,55 @@ use App\Http\Controllers\dashboardController;
 */
 
 Route::get('/', function () {
-    return view('frontend.landing.main.main');
-});
-Route::get('/berita', function () {
-    return view('frontend.landing.main.berita.berita');
+    $response_berita = Http::get('https://portal.tasikmalayakota.go.id/api/berita');
+    $berita = $response_berita->json(); // Mengubah respon ke format JSON
+    $beritaLimited = array_slice($berita['items'], 0, 4);
+
+    $response_pengumuman = Http::get('https://portal.tasikmalayakota.go.id/api/pengumuman');
+    $pengumuman = $response_pengumuman->json(); // Mengubah respon ke format JSON
+    $pengumumanLimited = array_slice($pengumuman['items'], 0, 4);
+
+    return view('frontend.landing.main.main', compact('beritaLimited', 'pengumumanLimited'));
 });
 
-Route::get('/berita/namaberita', function () {
-    return view('frontend.landing.main.berita.detail.beritadetail');
+Route::get('/berita', function () {
+    $response = Http::get('https://portal.tasikmalayakota.go.id/api/berita');
+    $berita = $response->json();
+
+    return view('frontend.landing.main.berita.berita', compact('berita'));
+});
+
+Route::get('/berita/{id}', function ($id) {
+    $response = Http::get('https://portal.tasikmalayakota.go.id/api/berita');
+    $berita = $response->json();
+
+    $beritaId = $id; // Berita ID yang ingin Anda tampilkan
+
+    $detailBerita = collect($berita['items'])->firstWhere('berita_id', $beritaId);
+
+    return view('frontend.landing.main.berita.detail.beritadetail', compact('detailBerita'));
 });
 Route::get('/pengumuman', function () {
-    return view('frontend.landing.main.pengumuman.pengumuman');
+    $response = Http::get('https://portal.tasikmalayakota.go.id/api/pengumuman');
+    $pengumuman = $response->json();
+
+    return view('frontend.landing.main.pengumuman.pengumuman', compact('pengumuman'));
 });
-Route::get('/pengumuman/detail', function () {
-    return view('frontend.landing.main.pengumuman.detail.detail');
+Route::get('/pengumuman/{id}', function ($id) {
+    $response = Http::get('https://portal.tasikmalayakota.go.id/api/pengumuman');
+    $pengumuman = $response->json();
+
+    $pengumumanId = $id; // Berita ID yang ingin Anda tampilkan
+
+    $detailPengumuman = collect($pengumuman['items'])->firstWhere('jadwal_id', $pengumumanId);
+
+    return view('frontend.landing.main.pengumuman.detail.detail', compact('detailPengumuman'));
 });
+
 Route::get('/ppid-center', function () {
     return view('frontend.landing.ppidcenter.ppidcenter');
 });
-Route::get('/informasi_berkala', function () {
+Route::get('/informasi-berkala', function () {
     return view('frontend.landing.informasi_berkala.informasiberkala');
 });
 Route::get('/mekanisme_perolehan_informasi', function () {
@@ -55,9 +85,12 @@ Route::get('/ppid_pembantu/detail', function () {
     return view('frontend.landing.ppid_pembantu.detail.ppid_pembantu_detail');
 });
 Route::get('/e-magazine', function () {
-    return view('frontend.landing.e-magazine.e-magazine');
+    $response = Http::get('https://portal.tasikmalayakota.go.id/api/magazine');
+    $magazine = $response->json();
+
+    return view('frontend.landing.e-magazine.e-magazine', compact('magazine'));
 });
-Route::get('/span', function () {
+Route::get('/span-lapor', function () {
     return view('frontend.landing.span_lapor.span_lapor');
 });
 Route::get('/permohonan_informasi_online', function () {
@@ -95,3 +128,5 @@ Route::get('/list_akun', function () {
 // });
 Route::get('/permohonan_informasi_dashboard', [dashboardController::class, 'permohonan_informasi']);
 Route::get('/permohonan_keberatan_dashboard', [dashboardController::class, 'permohonan_keberatan']);
+
+Route::post('/login', [AuthController::class, 'login'])->name('login');

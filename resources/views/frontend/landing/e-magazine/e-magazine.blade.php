@@ -17,11 +17,9 @@
     @include('components.header')
     @include('frontend.landing.e-magazine.content')
     @include('components.modal.modaldetail')
-    @include('components.modal.modalonline')
     @include('components.modal.modal_login')
     @yield('modallogin')
     @yield('modaldetail')
-    @yield('modalonline')
     @yield('header')
 
 
@@ -138,6 +136,7 @@
         document.getElementById('prev').addEventListener('click', onPrevPage);
         document.getElementById('next').addEventListener('click', onNextPage);
     </script> --}}
+    
 </body>
 
 </html>

@@ -23,7 +23,7 @@
             </a>
         </div>
         <hr class="horizontal dark mt-0">
-        <div class="collapse navbar-collapse w-auto h-auto ps" id="sidenav-collapse-main">
+        <div class="collapse navbar-collapse w-auto ps h-auto" id="sidenav-collapse-main">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link {{ request()->path() === $dashboard ? 'active' : '' }}" href="/dashboard">
@@ -110,7 +110,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->path() === $permohonan_informasi ? 'active' : '' }}"
-                        href="../pages/dashboard.html">
+                        href="/permohonan_informasi_dashboard">
                         <div
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <svg class="text-dark" width="16px" height="16px" viewBox="0 0 46 42" version="1.1"
@@ -143,7 +143,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->path() === $permohonan_keberatan ? 'active' : '' }}"
-                        href="../pages/dashboard.html">
+                        href="/permohonan_keberatan_dashboard">
                         <div
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
 
@@ -176,7 +176,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->path() === $ppid_pembantu ? 'active' : '' }}"
-                        href="../pages/dashboard.html">
+                        href="/ppid_pembantu_dashboard">
                         <div
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
 
@@ -208,7 +208,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->path() === $jenis_dokumen ? 'active' : '' }}"
-                        href="../pages/dashboard.html">
+                        href="/jenis_dokumen">
                         <div
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <svg class="text-dark" width="16px" height="16px" viewBox="0 0 40 40" version="1.1"
@@ -271,7 +271,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->path() === $akun ? 'active' : '' }}" href="../pages/dashboard.html">
+                    <a class="nav-link {{ request()->path() === $akun ? 'active' : '' }}" href="/akun">
                         <div
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <svg class="text-dark" width="16px" height="16px" viewBox="0 0 40 40" version="1.1"

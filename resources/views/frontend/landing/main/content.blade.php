@@ -80,162 +80,31 @@
             <div class="col-12">
                 <div class="row d-flex justify-content-center gy-4">
                     {{-- card --}}
-
-                    <div class="col-12 col-md-4 col-lg-2 d-flex justify-content-center">
-                        <div class="card px-2 pt-2 bg-white news-card-hover shadow-sm">
-                            <img src="https://portal.tasikmalayakota.go.id/assets/uploads/SHB1r_1698899497_katasik-4.jpg"
-                                class="rounded-2 w-100 " alt="...">
-                            <div class="card-body ">
-                                <h6 class="card-subtitle mb-2 text-body-secondary">Rabu, 20 Oktober 2021 | Nama Penulis</h6>
-                                <p class="card-title fs-3">Judul Berita</p>
-                                <p class="card-text text-ellipsis">preview berita Lorem ipsum dolor sit amet
-                                    consectetur,adipisicing elit. Eius perferendis velit expedita natus, qui, minima libero
-                                    id officia sequi sunt vero porro, quisquam explicabo obcaecati quis deleniti
-                                    molestiae.In, perferendis!</p>
-
-                            </div>
-                            <div class="card-footer border-0 bg-white">
-                                <div class="row ">
-
-                                    <div class="col-12 align-self-end text-end">
-                                        <a href="#" class="stretched-link  text-black text-decoration-none">
-                                            <i class="bi bi-arrow-right "></i></a>
+                    @if($beritaLimited)
+                    @foreach ($beritaLimited as $dataBerita)
+                        <div class="col-12 col-md-4 col-lg-3 d-flex justify-content-center">
+                            <div class="card px-2 pt-2 bg-white news-card-hover shadow-sm">
+                                <img src="https://portal.tasikmalayakota.go.id/assets/uploads/{{ $dataBerita['berita_cover'] }}" class="rounded-2 w-100" alt="...">
+                                <div class="card-body">
+                                    <h6 class="card-subtitle mb-2 text-body-secondary">{{ $dataBerita['berita_tanggal'] }}</h6>
+                                    <p class="card-title fs-3">{{ Str::limit($dataBerita['berita_judul'], 50) }}</p>
+                                    <p class="card-text text-ellipsis">{!! Str::limit(strip_tags($dataBerita['berita_isi']), 200) !!}</p>
+                                </div>
+                                <div class="card-footer border-0 bg-white">
+                                    <div class="row">
+                                        <div class="col-12 align-self-end text-end">
+                                            <a href="/berita/{{ $dataBerita['berita_id'] }}" class="stretched-link text-black text-decoration-none">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-md-4 col-lg-2 d-flex justify-content-center">
-                        <div class="card px-2 pt-2 bg-white news-card-hover shadow-sm">
-                            <img src="https://portal.tasikmalayakota.go.id/assets/uploads/SHB1r_1698899497_katasik-4.jpg"
-                                class="rounded-2 w-100 " alt="...">
-                            <div class="card-body ">
-                                <h6 class="card-subtitle mb-2 text-body-secondary">Rabu, 20 Oktober 2021 | Nama Penulis</h6>
-                                <p class="card-title fs-3">Judul Berita</p>
-                                <p class="card-text text-ellipsis">preview berita Lorem ipsum dolor sit amet
-                                    consectetur,adipisicing elit. Eius perferendis velit expedita natus, qui, minima libero
-                                    id officia sequi sunt vero porro, quisquam explicabo obcaecati quis deleniti
-                                    molestiae.In, perferendis!</p>
-
-                            </div>
-                            <div class="card-footer border-0 bg-white">
-                                <div class="row ">
-
-                                    <div class="col-12 align-self-end text-end">
-                                        <a href="#" class="stretched-link  text-black text-decoration-none">
-                                            <i class="bi bi-arrow-right "></i></a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 col-lg-2 d-flex justify-content-center">
-                        <div class="card px-2 pt-2 bg-white news-card-hover shadow-sm">
-                            <img src="https://portal.tasikmalayakota.go.id/assets/uploads/SHB1r_1698899497_katasik-4.jpg"
-                                class="rounded-2 w-100 " alt="...">
-                            <div class="card-body ">
-                                <h6 class="card-subtitle mb-2 text-body-secondary">Rabu, 20 Oktober 2021 | Nama Penulis
-                                </h6>
-                                <p class="card-title fs-3">Judul Berita</p>
-                                <p class="card-text text-ellipsis">preview berita Lorem ipsum dolor sit amet
-                                    consectetur,adipisicing elit. Eius perferendis velit expedita natus, qui, minima libero
-                                    id officia sequi sunt vero porro, quisquam explicabo obcaecati quis deleniti
-                                    molestiae.In, perferendis!</p>
-
-                            </div>
-                            <div class="card-footer border-0 bg-white">
-                                <div class="row ">
-
-                                    <div class="col-12 align-self-end text-end">
-                                        <a href="#" class="stretched-link  text-black text-decoration-none">
-                                            <i class="bi bi-arrow-right "></i></a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 col-lg-2 d-flex justify-content-center">
-                        <div class="card px-2 pt-2 bg-white news-card-hover shadow-sm">
-                            <img src="https://portal.tasikmalayakota.go.id/assets/uploads/SHB1r_1698899497_katasik-4.jpg"
-                                class="rounded-2 w-100 " alt="...">
-                            <div class="card-body ">
-                                <h6 class="card-subtitle mb-2 text-body-secondary">Rabu, 20 Oktober 2021 | Nama Penulis
-                                </h6>
-                                <p class="card-title fs-3">Judul Berita</p>
-                                <p class="card-text text-ellipsis">preview berita Lorem ipsum dolor sit amet
-                                    consectetur,adipisicing elit. Eius perferendis velit expedita natus, qui, minima libero
-                                    id officia sequi sunt vero porro, quisquam explicabo obcaecati quis deleniti
-                                    molestiae.In, perferendis!</p>
-
-                            </div>
-                            <div class="card-footer border-0 bg-white">
-                                <div class="row ">
-
-                                    <div class="col-12 align-self-end text-end">
-                                        <a href="#" class="stretched-link  text-black text-decoration-none">
-                                            <i class="bi bi-arrow-right "></i></a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 col-lg-2 d-flex justify-content-center">
-                        <div class="card px-2 pt-2 bg-white news-card-hover shadow-sm">
-                            <img src="https://portal.tasikmalayakota.go.id/assets/uploads/SHB1r_1698899497_katasik-4.jpg"
-                                class="rounded-2 w-100 " alt="...">
-                            <div class="card-body ">
-                                <h6 class="card-subtitle mb-2 text-body-secondary">Rabu, 20 Oktober 2021 | Nama Penulis
-                                </h6>
-                                <p class="card-title fs-3">Judul Berita</p>
-                                <p class="card-text text-ellipsis">preview berita Lorem ipsum dolor sit amet
-                                    consectetur,adipisicing elit. Eius perferendis velit expedita natus, qui, minima libero
-                                    id officia sequi sunt vero porro, quisquam explicabo obcaecati quis deleniti
-                                    molestiae.In, perferendis!</p>
-
-                            </div>
-                            <div class="card-footer border-0 bg-white">
-                                <div class="row ">
-
-                                    <div class="col-12 align-self-end text-end">
-                                        <a href="#" class="stretched-link  text-black text-decoration-none">
-                                            <i class="bi bi-arrow-right "></i></a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 col-lg-2 d-flex justify-content-center">
-                        <div class="card px-2 pt-2 bg-white news-card-hover shadow-sm">
-                            <img src="https://portal.tasikmalayakota.go.id/assets/uploads/SHB1r_1698899497_katasik-4.jpg"
-                                class="rounded-2 w-100 " alt="...">
-                            <div class="card-body ">
-                                <h6 class="card-subtitle mb-2 text-body-secondary">Rabu, 20 Oktober 2021 | Nama Penulis
-                                </h6>
-                                <p class="card-title fs-3">Judul Berita</p>
-                                <p class="card-text text-ellipsis">preview berita Lorem ipsum dolor sit amet
-                                    consectetur,adipisicing elit. Eius perferendis velit expedita natus, qui, minima libero
-                                    id officia sequi sunt vero porro, quisquam explicabo obcaecati quis deleniti
-                                    molestiae.In, perferendis!</p>
-
-                            </div>
-                            <div class="card-footer border-0 bg-white">
-                                <div class="row ">
-
-                                    <div class="col-12 align-self-end text-end">
-                                        <a href="#" class="stretched-link  text-black text-decoration-none">
-                                            <i class="bi bi-arrow-right "></i></a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
+                    @endforeach
+                @else
+                    <p>Data berita tidak tersedia.</p>
+                @endif
 
 
 
@@ -246,7 +115,7 @@
             </div>
             <div class="col-12 d-flex justify-content-center">
                 <button class="btn btn-success text-capitalize p-3">
-                    selengkapnya
+                    <a href="/berita" class="stretched-link text-white text-decoration-none">Selengkapnya</a>
                 </button>
             </div>
         </div>
@@ -261,128 +130,29 @@
                         <p class="fs-1 fw-semibold"> Pengumuman</p>
                     </div>
                     {{-- konten pengumuman --}}
+                    @if($pengumumanLimited)
+                    @foreach ($pengumumanLimited as $dataPengumuman)
                     <div class="col-12 mt-3 border-bottom py-3 border-1 hovered-pengumuman">
                         <div class="row w-100 ">
                             <div class="col-12 col-lg-2 ">
-                                <p class="fs-5 text-capitalize fw-semibold text-ellipsis"> 24 Oktober 2205</p>
+                                <p class="fs-5 text-capitalize fw-semibold text-ellipsis">{{ $dataPengumuman['jadwal_tanggal'] }}</p>
                             </div>
                             <div class="col-12 col-lg-7 ">
                                 <div class="w-75">
                                     <p class="fs-6 text-capitalize fw-bold link-dark text-decoration-none text-ellipsis">
-                                        nama
-                                        pengumuman
-                                        Lorem
-                                        ipsum dolor, sit amet
-                                        consectetur
-                                        adipisicing elit. Dignissimos, repellat provident, praesentium, iure optio doloribus
-                                        sapiente distinctio eligendi nemo dolor ad recusandae? Eligendi assumenda quo modi
-                                        voluptatum nihil ea natus.</p>
+                                        {{ $dataPengumuman['jadwal_judul'] }}</p>
                                 </div>
                             </div>
                             <div class="col-12 d-flex justify-content-center d-lg-block col-lg-3 text-end">
                                 <a class="btn-pill text-decoration-none stretched-link"
-                                    href="/pengumuman/detail">Selengkapnya</a>
+                                    href="/pengumuman/{{ $dataPengumuman['jadwal_id'] }}">Selengkapnya</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 mt-3 border-bottom py-3 border-1 hovered-pengumuman">
-                        <div class="row w-100 ">
-                            <div class="col-12 col-lg-2 ">
-                                <p class="fs-5 text-capitalize fw-semibold text-ellipsis"> 24 Oktober 2205</p>
-                            </div>
-                            <div class="col-12 col-lg-7 ">
-                                <div class="w-75">
-                                    <p class="fs-6 text-capitalize fw-bold link-dark text-decoration-none text-ellipsis">
-                                        nama
-                                        pengumuman
-                                        Lorem
-                                        ipsum dolor, sit amet
-                                        consectetur
-                                        adipisicing elit. Dignissimos, repellat provident, praesentium, iure optio doloribus
-                                        sapiente distinctio eligendi nemo dolor ad recusandae? Eligendi assumenda quo modi
-                                        voluptatum nihil ea natus.</p>
-                                </div>
-                            </div>
-                            <div class="col-12 d-flex justify-content-center d-lg-block col-lg-3 text-end">
-                                <a class="btn-pill text-decoration-none stretched-link"
-                                    href="/pengumuman/detail">Selengkapnya</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 mt-3 border-bottom py-3 border-1 hovered-pengumuman">
-                        <div class="row w-100 ">
-                            <div class="col-12 col-lg-2 ">
-                                <p class="fs-5 text-capitalize fw-semibold text-ellipsis"> 24 Oktober 2205</p>
-                            </div>
-                            <div class="col-12 col-lg-7 ">
-                                <div class="w-75">
-                                    <p class="fs-6 text-capitalize fw-bold link-dark text-decoration-none text-ellipsis">
-                                        nama
-                                        pengumuman
-                                        Lorem
-                                        ipsum dolor, sit amet
-                                        consectetur
-                                        adipisicing elit. Dignissimos, repellat provident, praesentium, iure optio doloribus
-                                        sapiente distinctio eligendi nemo dolor ad recusandae? Eligendi assumenda quo modi
-                                        voluptatum nihil ea natus.</p>
-                                </div>
-                            </div>
-                            <div class="col-12 d-flex justify-content-center d-lg-block col-lg-3 text-end">
-                                <a class="btn-pill text-decoration-none stretched-link"
-                                    href="/pengumuman/detail">Selengkapnya</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 mt-3 border-bottom py-3 border-1 hovered-pengumuman">
-                        <div class="row w-100 ">
-                            <div class="col-12 col-lg-2 ">
-                                <p class="fs-5 text-capitalize fw-semibold text-ellipsis"> 24 Oktober 2205</p>
-                            </div>
-                            <div class="col-12 col-lg-7 ">
-                                <div class="w-75">
-                                    <p class="fs-6 text-capitalize fw-bold link-dark text-decoration-none text-ellipsis">
-                                        nama
-                                        pengumuman
-                                        Lorem
-                                        ipsum dolor, sit amet
-                                        consectetur
-                                        adipisicing elit. Dignissimos, repellat provident, praesentium, iure optio doloribus
-                                        sapiente distinctio eligendi nemo dolor ad recusandae? Eligendi assumenda quo modi
-                                        voluptatum nihil ea natus.</p>
-                                </div>
-                            </div>
-                            <div class="col-12 d-flex justify-content-center d-lg-block col-lg-3 text-end">
-                                <a class="btn-pill text-decoration-none stretched-link"
-                                    href="/pengumuman/detail">Selengkapnya</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 mt-3 border-bottom py-3 border-1 hovered-pengumuman">
-                        <div class="row w-100 ">
-                            <div class="col-12 col-lg-2 ">
-                                <p class="fs-5 text-capitalize fw-semibold text-ellipsis"> 24 Oktober 2205</p>
-                            </div>
-                            <div class="col-12 col-lg-7 ">
-                                <div class="w-75">
-                                    <p class="fs-6 text-capitalize fw-bold link-dark text-decoration-none text-ellipsis">
-                                        nama
-                                        pengumuman
-                                        Lorem
-                                        ipsum dolor, sit amet
-                                        consectetur
-                                        adipisicing elit. Dignissimos, repellat provident, praesentium, iure optio doloribus
-                                        sapiente distinctio eligendi nemo dolor ad recusandae? Eligendi assumenda quo modi
-                                        voluptatum nihil ea natus.</p>
-                                </div>
-                            </div>
-                            <div class="col-12 d-flex justify-content-center d-lg-block col-lg-3 text-end">
-                                <a class="btn-pill text-decoration-none stretched-link"
-                                    href="/pengumuman/detail">Selengkapnya</a>
-                            </div>
-                        </div>
-                    </div>
-
-
+                    @endforeach
+                    @else
+                        <p>Data berita tidak tersedia.</p>
+                    @endif
                 </div>
             </div>
             <div class="card-footer bg-white border-0 text-center">
@@ -410,39 +180,46 @@
     </div>
     {{-- web terkait --}}
     <div class="container-fluid mt-5">
-        <div class="row gy-2 gy-lg-3">
-            <div class="col-12">
-                <div class="row gy-2 d-flex justify-content-center">
-                    <div class="col-lg-3">
-                        <div class="card bg-white p-3 news-card-hover">
-                            <p>portal</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card bg-white p-3 news-card-hover">
-                            <p>SP4N</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card bg-white p-3 news-card-hover">
-                            <p>Data</p>
-                        </div>
-                    </div>
+        <div class="row gy-2 gy-lg-3 justify-content-center">
+            <div class="col-lg-3">
+                <div class="card bg-white p-4 news-card-hover d-flex align-items-center justify-content-center" style="height: 100%">
+                    <a href="https://portal.tasikmalayakota.go.id/" class="d-flex align-items-center justify-content-center" style="width: 100%; height: 100%" target="_blank">
+                        <img src="{{ asset('image/portal.png') }}" alt="Portal" style="max-width: 100%; max-height: 100%">
+                    </a>
+                </div>                
+            </div>
+            <div class="col-lg-3">
+                <div class="card bg-white p-4 news-card-hover d-flex align-items-center justify-content-center" style="height: 100%" target="_blank">
+                    <a href="https://lapor.go.id/">
+                        <img src="{{ asset('image/lapor.png') }}" alt="SP4N Lapor" style="width: 100%; height: 100%">
+                    </a>
                 </div>
             </div>
-            <div class="col-12">
-                <div class="row d-flex gy-2 justify-content-center">
-                    <div class="col-lg-3">
-                        <div class="card bg-white p-3 news-card-hover">
-                            <p>JDIH</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card bg-white p-3 news-card-hover">
-                            <p>LPSE</p>
-                        </div>
-                    </div>
+            <div class="col-lg-3">
+                <div class="card bg-white p-4 news-card-hover d-flex align-items-center justify-content-center" style="height: 100%" target="_blank">
+                    <a href="https://opendata.tasikmalayakota.go.id/">
+                        <img src="{{ asset('image/open-data.png') }}" alt="Open Data" style="width: 100%; height: 100%">
+                    </a>
                 </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card bg-white p-4 news-card-hover d-flex align-items-center justify-content-center" style="height: 100%" target="_blank">
+                    <a href="https://jdih.tasikmalayakota.go.id/">
+                        <img src="{{ asset('image/jdih.png') }}" alt="JDIH" style="width: 100%; height: 100%">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card bg-white p-4 news-card-hover d-flex align-items-center justify-content-center" style="height: 100%" target="_blank">
+                    <a href="https://lpse.tasikmalayakota.go.id/">
+                        <img src="{{ asset('image/lpse.png') }}" alt="LPSE" style="width: 100%; height: 100%">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+                
             </div>
         </div>
     </div>

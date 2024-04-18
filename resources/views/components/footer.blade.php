@@ -96,7 +96,7 @@
         </div>
 
         <div class="d-flex flex-column flex-sm-row justify-content-center  border-top text-white">
-            <p class="fs-6">Copyright © 2023 DISKOMINFO KOTA TASIKMALAYA. All Rights Reserved.</p>
+           <br><p class="fs-6">Copyright © 2023 DISKOMINFO KOTA TASIKMALAYA. All Rights Reserved.</p>
         </div>
     </footer>
 @endsection

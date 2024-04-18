@@ -30,11 +30,11 @@
                 {{-- fix --}}
                 <ul class="nav nav-pills flex-column mb-md-0 text-white">
 
-                    <li class="nav-item"><a href="#"
+                    <li class="nav-item"><a href="/"
                             class="nav-link link-header {{ request()->is('/') ? 'actived' : '' }} rounded-0">Beranda</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link link-header rounded-0" role="button" data-bs-toggle="dropdown"
+                        <a href="ppid-center" class="nav-link link-header rounded-0" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">PPID Center</a>
                     </li>
                     <li class="nav-item dropdown">
@@ -42,9 +42,9 @@
                             href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Informasi
                             Publik</a>
                         <ul class="dropdown-menu bg-white">
-                            <li><a class="dropdown-item text-capitalize" href="#">Berita</a></li>
-                            <li><a class="dropdown-item text-capitalize" href="#">Pengumuman</a></li>
-                            <li><a class="dropdown-item text-capitalize" href="#">Informasi berkala</a></li>
+                            <li><a class="dropdown-item text-capitalize" href="/berita">Berita</a></li>
+                            <li><a class="dropdown-item text-capitalize" href="/pengumuman">Pengumuman</a></li>
+                            <li><a class="dropdown-item text-capitalize" href="/informasi-berkala">Informasi berkala</a></li>
                             <li><a class="dropdown-item text-capitalize" href="#">Informasi setiap saat</a>
                             </li>
                             <li><a class="dropdown-item text-capitalize" href="#">Informasi serta merta</a>
@@ -71,14 +71,14 @@
                                     permohonan
                                     informasi
                                     Offline</a></li>
-                            <li><a class="dropdown-item text-capitalize" href="#">mekanisme perolehan
+                            <li><a class="dropdown-item text-capitalize" href="/mekanisme_perolehan_informasi">mekanisme perolehan
                                     informasi</a>
                             </li>
-                            <li><a class="dropdown-item text-capitalize" href="#">SP4N Lapor</a></li>
+                            <li><a class="dropdown-item text-capitalize" href="/span-lapor">SP4N Lapor</a></li>
 
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="#"
+                    <li class="nav-item"><a href="/e-magazine"
                             class="nav-link link-header rounded-0 {{ request()->is('e-magazine') ? 'actived' : '' }}">E-magazine</a>
                     </li>
                     <li class="mt-3"><button class="btn btn-primary w-100" data-bs-toggle="modal"
@@ -116,10 +116,10 @@
                 </form>
                 <div class="d-none  d-xxl-block col-md-auto col-12 mb-2 mb-md-0 ms-auto">
                     <ul class=" nav ">
-                        <li class="nav-item "><a href="#"
+                        <li class="nav-item "><a href="/"
                                 class="nav-link px-2 link-header rounded-0 {{ request()->is('/') ? 'actived' : '' }}">Beranda</a>
                         </li>
-                        <li class="nav-item dropdown"><a href="#" class="nav-link px-2 link-header rounded-0">PPID
+                        <li class="nav-item dropdown"><a href="ppid-center" class="nav-link px-2 link-header rounded-0">PPID
                                 Center</a>
                         </li>
                         <li class="nav-item dropdown">
@@ -128,9 +128,9 @@
                                 Informasi Publik
                             </a>
                             <ul class="dropdown-menu bg-white">
-                                <li><a class="dropdown-item text-capitalize" href="#">Berita</a></li>
-                                <li><a class="dropdown-item text-capitalize" href="#">Pengumuman</a></li>
-                                <li><a class="dropdown-item text-capitalize" href="#">Informasi berkala</a></li>
+                                <li><a class="dropdown-item text-capitalize" href="/berita">Berita</a></li>
+                                <li><a class="dropdown-item text-capitalize" href="/pengumuman">Pengumuman</a></li>
+                                <li><a class="dropdown-item text-capitalize" href="/informasi-berkala">Informasi berkala</a></li>
                                 <li><a class="dropdown-item text-capitalize" href="#">Informasi setiap saat</a></li>
                                 <li><a class="dropdown-item text-capitalize" href="#">Informasi serta merta</a></li>
                                 <li><a class="dropdown-item text-capitalize" href="#">DIDP PPID Utama</a></li>
@@ -155,14 +155,14 @@
                                 <li><a class="dropdown-item text-capitalize" href="#">formulir pelayanan permohonan
                                         informasi
                                         Offline</a></li>
-                                <li><a class="dropdown-item text-capitalize" href="#">mekanisme perolehan
+                                <li><a class="dropdown-item text-capitalize" href="/mekanisme_perolehan_informasi">mekanisme perolehan
                                         informasi</a>
                                 </li>
-                                <li><a class="dropdown-item text-capitalize" href="#">SP4N Lapor</a></li>
+                                <li><a class="dropdown-item text-capitalize" href="/span-lapor">SP4N Lapor</a></li>
 
                             </ul>
                         </li>
-                        <li class="nav-item"><a href="#"
+                        <li class="nav-item"><a href="/e-magazine"
                                 class="nav-link px-2 link-header rounded-0 {{ request()->is('e-magazine') ? 'actived' : '' }}">E-magazine</a>
                         </li>
                         <li><button class="btn btn-primary" data-bs-toggle="modal"

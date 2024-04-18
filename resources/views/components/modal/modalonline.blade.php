@@ -10,7 +10,7 @@
                 <div class="modal-body ">
                     <div class="ratio" style="--bs-aspect-ratio: 100%;">
 
-                        <iframe src="https://drive.google.com/file/d/1wSOABVW6lvN95SiI4NAMhasFsT4VyMtw/preview"
+                        <iframe src="https://drive.google.com/file/d/1tK7Rpw-IUGg8umeweOoiS8ppq92OXI2F/preview"
                             style="width: 100%; height:100%" frameborder="0"></iframe>
                     </div>
                 </div>
