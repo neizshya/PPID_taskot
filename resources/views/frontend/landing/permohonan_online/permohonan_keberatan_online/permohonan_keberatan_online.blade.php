@@ -12,6 +12,7 @@
     <link rel="stylesheet" href=" {{ asset('pdf-js/web/viewer.css') }}">
 
     <script src="{{ asset('pdf-js/web/viewer.mjs') }}" type="module"></script>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=RcP4SgRW"></script>
 </head>
 
 <body>

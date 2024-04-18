@@ -23,7 +23,7 @@ class dashboardController extends Controller
             [
                 'date' => '2023-02-15',
                 'event' => 'Hasil Permohonan',
-                'status' => false,
+                'status' => true,
             ]
         ];
 

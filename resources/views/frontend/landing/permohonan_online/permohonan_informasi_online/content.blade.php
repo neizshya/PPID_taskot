@@ -5,25 +5,33 @@
     </div>
     <div class="container-fluid px-5">
         {{-- kanan --}}
-        <form action="" class="row w-100">
+        <script>
+            // Cek jika ada pesan 'success' dalam session
+            @if(session('success'))
+                // Tampilkan pesan alert menggunakan JavaScript
+                alert("{{ session('success') }}");
+            @endif
+        </script>
+        <form class="row g-3" action="{{ route('informasi.tambah') }}" class="row w-100" method="POST" enctype="multipart/form-data">
+                @csrf <!-- Token untuk proteksi CSRF --> 
             <div class="row">
                 <div class="col-12 col-lg-8">
                     <div class="col-12 text-white">
                         <p>Tipe Pemohon</p>
-                        <input type="radio" class="btn-check" name="tipe-pemohon" id="perorangan" autocomplete="off"
+                        <input type="radio" class="btn-check" name="tipe_pemohon" id="perorangan" autocomplete="off"
                             value="perorangan" checked>
                         <label class="btn btn-outline-light" for="perorangan">Perorangan</label>
 
-                        <input type="radio" class="btn-check" name="tipe-pemohon" id="kelompok_masyarakat"
+                        <input type="radio" class="btn-check" name="tipe_pemohon" id="kelompok_masyarakat"
                             value="kelompok_masyarakat" autocomplete="off">
                         <label class="btn btn-outline-light" for="kelompok_masyarakat">Kelompok Masyarakat</label>
 
-                        <input type="radio" class="btn-check" name="tipe-pemohon" id="pemohon_berbadan_hukum"
+                        <input type="radio" class="btn-check" name="tipe_pemohon" id="pemohon_berbadan_hukum"
                             value="pemohon_berbadan_hukum" autocomplete="off">
                         <label class="btn btn-outline-light" for="pemohon_berbadan_hukum">Pemohon Berbadan
                             Hukum</label>
 
-
+ 
                     </div>
                     <div class="row g-2" id="form-inputs">
                         {{-- input --}}

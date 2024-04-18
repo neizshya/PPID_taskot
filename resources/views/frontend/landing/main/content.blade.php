@@ -1,38 +1,28 @@
 @section('content')
+{{--
+@if(session('error'))
+<div class="alert alert-danger">
+    {{ session('error') }}
+</div>
+@endif
+--}}
     {{-- carousel --}}
-
-    <div id="carousel-beranda" class="carousel slide carousel-height w-100 mb-3" data-bs-ride="carousel" data-bs-interval="4000"
-        data-bs-touch="true">
+    <div id="carousel-beranda" class="carousel slide carousel-height w-100 mb-3" data-bs-ride="carousel" data-bs-interval="4000" data-bs-touch="true">
         <div class="carousel-indicators">
-            <a type="button" data-bs-target="#carousel-beranda" data-bs-slide-to="0" class="active" aria-current="true"
-                aria-label="Slide 1"></a>
-            <a type="button" data-bs-target="#carousel-beranda" data-bs-slide-to="1" aria-label="Slide 2"></a>
-            <a type="button" data-bs-target="#carousel-beranda" data-bs-slide-to="2" aria-label="Slide 3"></a>
+            @foreach($slide as $key => $x)
+                <button type="button" data-bs-target="#carousel-beranda" data-bs-slide-to="{{ $key }}" class="{{ $key === 0 ? 'active' : '' }}" aria-label="Slide {{ $key + 1 }}"></button>
+            @endforeach
         </div>
-
+    
         <div class="carousel-inner">
-            <div class="carousel-item carousel-image-height active">
-                <img src="https://cdn.pixabay.com/photo/2023/10/21/18/47/boat-8332114_1280.jpg"
-                    class="d-block mx-auto w-100 h-100 object-fit-fill" alt="...">
-            </div>
-            <div class="carousel-item carousel-image-height">
-                <img src="https://media.istockphoto.com/id/1258157315/id/foto/open-water-fun.webp?s=2048x2048&w=is&k=20&c=svi-56t3NpBknqQxg-xZNko56xknAb_IMPc9WdlASyY="
-                    class="d-block mx-auto w-100 h-100 object-fit-fill" alt="...">
-            </div>
-            <div class="carousel-item carousel-image-height">
-                <img src="https://media.istockphoto.com/id/1211025104/id/foto/pace-picnic-island-miami-biscayne-bay.webp?s=2048x2048&w=is&k=20&c=GCpJlYos-XQFbxfgJfzU1HqJZYVt0yRjqn2KHkGma-I="
-                    class="d-block mx-auto w-100 h-100 object-fit-fill" alt="...">
-            </div>
+            @foreach($slide as $key => $x)
+                <div class="carousel-item{{ $key === 0 ? ' active' : '' }} carousel-image-height">
+                    <img src="{{ asset($x->foto) }}" class="d-block mx-auto w-100 h-100 object-fit-fill" alt="...">
+                </div>
+            @endforeach
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-beranda" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carousel-beranda" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+    </div>  
+
 
 
 
@@ -41,25 +31,25 @@
     <div class="container-fluid mt-4 d-flex justify-content-center">
         <div class="row w-100  text-center text-white p-4 rounded-4" style="background-color: #03205C">
             <div class="col-12 col-sm-6 col-lg-3 col-xxl-3">
-                <a class="row link-card-beranda text-decoration-none" href="javascript:void(0)">
-                    <p class="col-12 fs-5">Informasi Publik Secara Berkala</p>
+                <a class="row link-card-beranda text-decoration-none" href="/informasi-berkala">
+                    <p class="col-12 fs-5" onclick="responsiveVoice.speak('Informasi Publik Secara Berkala.', 'Indonesian Female');">Informasi Publik Secara Berkala</p>
                     <p class="col-12 fs-6">Merupakan informasi yang wajib disediakan dan diumumkan secara berkala.</p>
                 </a>
             </div>
             <div class="col-12 col-sm-6 col-lg-3 col-xxl-3">
-                <a class="row link-card-beranda text-decoration-none" href="javascript:void(0)">
+                <a class="row link-card-beranda text-decoration-none" href="/informasi-serta-merta">
                     <p class="col-12 fs-5">Informasi Serta Merta</p>
                     <p class="col-12 fs-6">Informasi yang dapat mengancam hajat hidup orang banyak dan ketertiban umum.</p>
                 </a>
             </div>
             <div class="col-12 col-sm-6 col-lg-3 col-xxl-3">
-                <a class="row link-card-beranda text-decoration-none" href="javascript:void(0)">
+                <a class="row link-card-beranda text-decoration-none" href="/informasi-setiap-saat">
                     <p class="col-12 fs-5">Informasi Setiap Saat</p>
                     <p class="col-12 fs-6">Informasi yang wajib disediakan oleh Badan Publik.</p>
                 </a>
             </div>
             <div class="col-12 col-sm-6 col-lg-3 col-xxl-3">
-                <a class="row link-card-beranda text-decoration-none" href="javascript:void(0)">
+                <a class="row link-card-beranda text-decoration-none" href="/permohonan_informasi_online">
                     <p class="col-12 fs-5">Permintaan Informasi</p>
                     <p class="col-12 fs-6">Klik disini untuk melakukan permintaan informasi publik.</p>
                 </a>
@@ -105,19 +95,16 @@
                 @else
                     <p>Data berita tidak tersedia.</p>
                 @endif
-
-
-
-
-
-
                 </div>
             </div>
-            <div class="col-12 d-flex justify-content-center">
+            <div class="card-footer bg-white border-0 text-center">
+                <a class="btn btn-pengumuman text-capitalize w-50" href="/berita">Selengkapnya</a>
+            </div>
+            {{-- <div class="col-12 d-flex justify-content-center">
                 <button class="btn btn-success text-capitalize p-3">
                     <a href="/berita" class="stretched-link text-white text-decoration-none">Selengkapnya</a>
                 </button>
-            </div>
+            </div> --}}
         </div>
 
     </div>

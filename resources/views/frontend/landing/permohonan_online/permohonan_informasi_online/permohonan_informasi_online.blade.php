@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Permohonan Informasi Online | PPID Kota Tasikmalaya</title>
     <link rel="shortcut icon" type="image/png" href="{{ asset('image/logo_tasik.svg') }}">
-
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=RcP4SgRW"></script>
 </head>
 
 <body>
@@ -74,7 +74,7 @@
             const formPerorangan = `
               <div class="col-12">
                             <div class="input-wrapper">
-                                <input autocomplete="off" class="input" type="text" id="nama_pemohon" required
+                                <input autocomplete="off" class="input" type="text" name="nama_pemohon" id="nama_pemohon" required
                                     placeholder="nama pemohon" />
                                 <label class="label" for="nama_pemohon">
                                     Nama Pemohon <span class="text-danger">*</span>
@@ -83,7 +83,7 @@
                         </div>
                         <div class="col-12 col-lg-6">
                             <div class="input-wrapper">
-                                <input autocomplete="off" class="input" type="text" id="ktp_sim" required
+                                <input autocomplete="off" class="input" type="text" name="ktp_sim" id="ktp_sim" required
                                     placeholder="No KTP/SIM" />
                                 <label class="label" for="ktp_sim">
                                     No KTP/SIM <span class="text-danger">*</span>
@@ -92,7 +92,7 @@
                         </div>
                         <div class="col-12 col-lg-6">
                             <div class="input-wrapper">
-                                <input autocomplete="off" class="input" type="text" id="nim"
+                                <input autocomplete="off" class="input" type="text" id="nim" name="nim"
                                     placeholder="NIM (Jika Pemohon adalah Mahasiswa)" />
                                 <label class="label" for="nim">
                                     NIM (Jika Pemohon adalah Mahasiswa)
@@ -101,7 +101,7 @@
                         </div>
                         <div class="col-12">
                             <div class="input-wrapper">
-                                <input autocomplete="off" class="input" type="text" id="univ"
+                                <input autocomplete="off" class="input" type="text" id="univ" name="univ"
                                     placeholder="Perguruan Tinggi (Jika Pemohon adalah Mahasiswa)" />
                                 <label class="label" for="univ">
                                     Perguruan Tinggi (Jika Pemohon adalah Mahasiswa)
@@ -110,7 +110,7 @@
                         </div>
                         <div class="col-12">
                             <div class="input-wrapper">
-                                <input autocomplete="off" class="input" type="text" id="alamat"
+                                <input autocomplete="off" class="input" type="text" id="alamat" name="alamat"
                                     placeholder="Alamat Pemohon" />
                                 <label class="label" for="alamat">
                                     Alamat Pemohon <span class="text-danger">*</span>
@@ -119,7 +119,7 @@
                         </div>
                         <div class="col-12">
                             <div class="input-wrapper">
-                                <input autocomplete="off" class="input" type="text" id="pekerjaan" required
+                                <input autocomplete="off" class="input" type="text" id="pekerjaan" required name="pekerjaan"
                                     placeholder="Pekerjaan" />
                                 <label class="label" for="pekerjaan">
                                     Pekerjaan <span class="text-danger">*</span>
@@ -128,7 +128,7 @@
                         </div>
                         <div class="col-12 col-lg-6">
                             <div class="input-wrapper">
-                                <input autocomplete="off" class="input" type="tel" id="no_hp" required
+                                <input autocomplete="off" class="input" type="tel" id="no_hp" required name="no_hp"
                                     placeholder="No Telepon/HP" />
                                 <label class="label" for="no_hp">
                                     No Telepon/HP <span class="text-danger">*</span>
@@ -137,7 +137,7 @@
                         </div>
                         <div class="col-12 col-lg-6">
                             <div class="input-wrapper">
-                                <input autocomplete="off" class="input" type="email" id="email" required
+                                <input autocomplete="off" class="input" type="email" id="email" required name="email"
                                     placeholder="E-mail" />
                                 <label class="label" for="no_hp">
                                     E-mail <span class="text-danger">*</span>
@@ -148,7 +148,7 @@
 
                         <div class="col-12 ">
                             <div class="input-wrapper">
-                                <textarea required autocomplete="off" class="textarea" name="informasi_dibutuhkan" id="informasi_dibutuhkan"
+                                <textarea required autocomplete="off" class="textarea" name="info" id="informasi_dibutuhkan" name="info"
                                     placeholder="Informasi Yang Dibutuhkan"></textarea>
                                 <label class="label" for="informasi_dibutuhkan">
                                     Informasi Yang Dibutuhkan
@@ -158,7 +158,7 @@
                         </div>
                         <div class="col-12 ">
                             <div class="input-wrapper">
-                                <textarea required autocomplete="off" class="textarea" name="alasan_informasi" id="alasan_informasi"
+                                <textarea required autocomplete="off" class="textarea" name="alasan" name="alasan" id="alasan_informasi"
                                     placeholder="Alasan Permintaan Informasi"></textarea>
                                 <label class="label" for="alasan_informasi">
                                     Alasan Permintaan Informasi
@@ -170,17 +170,17 @@
                             <p class="text-capitalize"> cara memperoleh informasi</p>
                             <div class="ps-4">
                                 <div class="form-check  ">
-                                    <input class="form-check-input" type="radio" name="cara_memperoleh"
+                                    <input class="form-check-input" type="radio" name="memperoleh_info"
                                         id="langsung_cara_memperoleh" value="langsung" required>
                                     <label class="form-check-label" for="langsung_cara_memperoleh">Langsung</label>
                                 </div>
                                 <div class="form-check ">
-                                    <input class="form-check-input" type="radio" name="cara_memperoleh"
+                                    <input class="form-check-input" type="radio" name="memperoleh_info"
                                         id="email_cara_memperoleh" value="email">
                                     <label class="form-check-label" for="email_cara_memperoleh">Email</label>
                                 </div>
                                 <div class="form-check  ">
-                                    <input class="form-check-input" type="radio" name="cara_memperoleh"
+                                    <input class="form-check-input" type="radio" name="memperoleh_info"
                                         id="whatsapp_cara_memperoleh" value="whatsapp">
                                     <label class="form-check-label" for="whatsapp_cara_memperoleh">Whatsapp</label>
                                 </div>
@@ -191,17 +191,17 @@
                             <p class="text-capitalize"> cara mengirimkan informasi</p>
                             <div class="ps-4">
                                 <div class="form-check  ">
-                                    <input class="form-check-input" type="radio" name="cara_mengirimkan"
+                                    <input class="form-check-input" type="radio" name="mengirim_info"
                                         id="langsung_cara_mengirimkan" value="langsung" required>
                                     <label class="form-check-label" for="langsung_cara_mengirimkan">Langsung</label>
                                 </div>
                                 <div class="form-check  ">
-                                    <input class="form-check-input" type="radio" name="cara_mengirimkan"
+                                    <input class="form-check-input" type="radio" name="mengirim_info"
                                         id="email_cara_mengirimkan" value="email">
                                     <label class="form-check-label" for="email_cara_mengirimkan">Email</label>
                                 </div>
                                 <div class="form-check  ">
-                                    <input class="form-check-input" type="radio" name="cara_mengirimkan"
+                                    <input class="form-check-input" type="radio" name="mengirim_info"
                                         id="whatsapp_cara_mengirimkan" value="whatsapp">
                                     <label class="form-check-label" for="whatsapp_cara_mengirimkan">Whatsapp</label>
                                 </div>
@@ -211,7 +211,7 @@
                         <div class="col-12  my-3">
                             <label for="identitas" class="form-label text-white">Identitas(KTP/SIM) Ukuran maksimal 300kb
                                 <span class="text-danger">*</span></label>
-                            <input data-bs-theme="dark" class="form-control" type="file" id="identitas"
+                            <input data-bs-theme="dark" class="form-control" type="file" name="file_ktp" id="identitas"
                                 accept=".jpg,.png,.pdf">
                         </div>
         `;
@@ -221,7 +221,7 @@
                                 <input autocomplete="off" class="input" type="text" id="nama_pemohon" required
                                     placeholder="nama pemohon" />
                                 <label class="label" for="nama_pemohon">
-                                    Nama Badan Hukum <span class="text-danger">*</span>
+                                    Nama Kelompok Orang<span class="text-danger">*</span>
                                 </label>
                             </div>
                         </div>
@@ -371,7 +371,7 @@
                                 <input autocomplete="off" class="input" type="text" id="nama_pemohon" required
                                     placeholder="nama pemohon" />
                                 <label class="label" for="nama_pemohon">
-                                    Nama Kelompok Orang <span class="text-danger">*</span>
+                                    Nama Badan Hukum <span class="text-danger">*</span>
                                 </label>
                             </div>
                         </div>

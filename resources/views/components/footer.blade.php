@@ -87,9 +87,13 @@
                             </div>
                         </a>
                     </div>
+                    <div class="col-12 ">
+                        <script type="text/javascript" src="https://freehitcounters.org/count/fbxa"></script><br>
+                        <a href='https://www.doktorweigl.de'>Medizin Infoseite</a> <script type='text/javascript' src='https://whomania.com/ctr?id=ca74c27cece532c1857e29d4522c850d4d980bff'></script>
+                    </div>
                 </div>
             </div>
-
+            
 
 
 

@@ -84,23 +84,29 @@
                 </div>
                 <div class="card-body p-3">
 
+                    @if(Auth::check())
                     <ul class="list-group">
-                        <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">Nama
-                                :</strong> &nbsp; Pegawai A</li>
-                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">NIK:</strong> &nbsp;
-                            94161651</li>
-                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">NIM:</strong> &nbsp;
-                            94161651</li>
-                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Alamat:</strong> &nbsp;
-                            Alamat A</li>
-                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Pekerjaan:</strong>
-                            &nbsp;
-                            Pekerjaan</li>
-                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">No. Telepon:</strong>
-                            &nbsp; 684061065</li>
-                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">E-mail:</strong>
-                            &nbsp; asdasdasd@aksdjnnads.com</li>
+                        <li class="list-group-item border-0 ps-0 pt-0 text-sm">
+                            <strong class="text-dark">Nama :</strong> &nbsp; {{ Auth::user()->name }}
+                        </li>
+                        <li class="list-group-item border-0 ps-0 text-sm">
+                            <strong class="text-dark">Username :</strong> &nbsp; {{ Auth::user()->nik }}
+                        </li>
+                        <li class="list-group-item border-0 ps-0 text-sm">
+                            <strong class="text-dark">Role :</strong> &nbsp; 
+
+                            @if(Auth::user()->role === 'PU')
+                                PPID Utama
+                            @elseif(Auth::user()->role === 'PP')
+                                PPID Pembantu
+                            @elseif(Auth::user()->role === 'user')
+                                User
+                            @endif
+                        </li>
                     </ul>
+                @endif
+
+
                 </div>
             </div>
         </div>
@@ -144,22 +150,23 @@
                     </a>
 
                     <div class="collapse" id="collapse_change_password">
-                        <form action="">
-                            <div class="mb-3">
-                                <label for="currentPassword">Kata Sandi Saat Ini</label>
-                                <input type="password" class="form-control" id="currentPassword">
-                            </div>
-                            <div class="mb-3">
-                                <label for="newPassword">Kata Sandi Baru</label>
-                                <input type="password" class="form-control" id="newPassword">
-                            </div>
-                            <div class="mb-3">
-                                <label for="newPassword">Masukan Ulang Kata Sandi Baru</label>
-                                <input type="password" class="form-control" id="re-newPassword">
-                            </div>
-                            <button type="submit" class="btn bg-secondary" id="change_password_submit" disabled>Simpan
-                                Perubahan</button>
-                        </form>
+                        <form action="{{ route('change.password') }}" method="POST" id="changePasswordForm">
+                                @csrf
+                                <div class="mb-3">
+                                    <label for="currentPassword">Kata Sandi Saat Ini</label>
+                                    <input type="password" class="form-control" id="currentPassword" name="currentPassword">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="newPassword">Kata Sandi Baru</label>
+                                    <input type="password" class="form-control" id="newPassword" name="newPassword">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="newPassword">Masukan Ulang Kata Sandi Baru</label>
+                                    <input type="password" class="form-control" id="re-newPassword" name="re-newPassword">
+                                </div>
+                                <button type="submit" class="btn bg-secondary" id="change_password_submit" disabled>Simpan
+                                    Perubahan</button>
+                            </form>
                     </div>
 
                     <a class="" data-bs-toggle="collapse" href="#collapse_change_information"
@@ -190,48 +197,24 @@
                     </a>
 
                     <div class="collapse" id="collapse_change_information">
-                        <!-- form edit information -->
-                        <form action="" method="post">
+                        <form action="{{ route('update.profile', ['id' => Auth::user()->id]) }}" method="post">
+                            @csrf
+                            @method('PUT') <!-- Tambahkan ini untuk melindungi dari serangan CSRF -->
                             <div class="mb-3">
                                 <label for="nama">Nama :</label>
-                                <input type="text" class="form-control" id="nama" name="nama"
-                                    value="Nama">
+                                <input type="text" class="form-control" id="nama" name="name" value="{{ Auth::user()->name }}">
                             </div>
                             <div class="mb-3">
-                                <label for="nik">NIK:</label>
-                                <input type="text" class="form-control" id="nik" name="nik"
-                                    value="94161651">
-                            </div>
-                            <div class="mb-3">
-                                <label for="nik">NIM:</label>
-                                <input type="text" class="form-control" id="nim" name="nim"
-                                    value="94161651">
-                            </div>
-                            <div class="mb-3">
-                                <label for="alamat">Alamat:</label>
-                                <textarea name="alamat" id="alamat"class="form-control" cols="10" rows="5"></textarea>
-                            </div>
-                            <div class="mb-3">
-                                <label for="pekerjaan">Pekerjaan:</label>
-                                <input type="text" class="form-control" id="pekerjaan" name="pekerjaan"
-                                    value="pekerjaan">
-                            </div>
-                            <div class="mb-3">
-                                <label for="no_telpon">No. Telepon:</label>
-                                <input type="text" class="form-control" id="no_telpon" name="no_telpon"
-                                    value="9844654">
-                            </div>
-                            <div class="mb-3">
-                                <label for="email">E-mail:</label>
-                                <input type="email" class="form-control" id="email" name="email"
-                                    value="asdasdsa@asdaa.com">
+                                <label for="nik">Username:</label>
+                                <input type="text" class="form-control" id="nik" name="nik" value="{{ Auth::user()->nik }}">
                             </div>
                             <button type="submit" class="btn bg-gradient-primary">Simpan Perubahan</button>
-                        </form>
+                        </form>                  
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
+    
 @endsection

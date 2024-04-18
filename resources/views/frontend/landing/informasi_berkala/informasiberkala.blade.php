@@ -10,7 +10,7 @@
     <script src="{{ asset('pdf-js/build/pdf.mjs') }}" type="module"></script>
 
     <link rel="stylesheet" href=" {{ asset('pdf-js/web/viewer.css') }}">
-
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=RcP4SgRW"></script>
     <script src="{{ asset('pdf-js/web/viewer.mjs') }}" type="module"></script>
 </head>
 

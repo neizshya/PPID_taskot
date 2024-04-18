@@ -5,25 +5,31 @@
     </div>
     <div class="container-fluid px-5">
         {{-- kanan --}}
-        <form action="" class="row w-100">
+        <script>
+            // Cek jika ada pesan 'success' dalam session
+            @if(session('success'))
+                // Tampilkan pesan alert menggunakan JavaScript
+                alert("{{ session('success') }}");
+            @endif
+        </script>
+        <form class="row g-3" action="{{ route('keberatan.tambah') }}" class="row w-100" method="POST" enctype="multipart/form-data">
+            @csrf <!-- Token untuk proteksi CSRF --> 
             <div class="row">
                 <div class="col-12 col-lg-8">
                     <div class="row">
                         {{-- input --}}
                         <div class="col-12">
                             <div class="input-wrapper">
-                                <input autocomplete="off" class="input" type="text" id="nomor_pendaftaran" required
-                                    placeholder="nomor pendaftaran" />
+                                <input autocomplete="off" class="input" name="no_reg" type="text" id="nomor_pendaftaran" required placeholder="nomor pendaftaran" />
                                 <label class="label" for="nomor_pendaftaran">
-                                    Nomor Pendaftaran Permohonan Informasi
+                                    Nomor Registrasi Permohonan Informasi
                                     <span class="text-danger">*</span>
                                 </label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="input-wrapper">
-                                <textarea required autocomplete="off" class="textarea" name="informasi_dimohonkan" id="informasi_dimohonkan"
-                                    placeholder="tujuan informasi"></textarea>
+                                <textarea required autocomplete="off" class="textarea" name="info_dimohon" required id="informasi_dimohonkan" placeholder="tujuan informasi"></textarea>
                                 <label class="label" for="informasi_dimohonkan">
                                     Informasi yang dimohonkan
                                     <span class="text-danger">*</span>
@@ -32,7 +38,7 @@
                         </div>
                         <div class="col-12 ">
                             <div class="input-wrapper">
-                                <textarea required autocomplete="off" class="textarea" name="tujuan_informasi" id="tujuan_informasi"
+                                <textarea required autocomplete="off" class="textarea" name="tujuan_info" id="tujuan_informasi"
                                     placeholder="tujuan informasi"></textarea>
                                 <label class="label" for="tujuan_informasi">
                                     Tujuan Pengunaan Informasi
@@ -43,7 +49,16 @@
                         <p class="fw-semibold fs-5 text-white mt-4">Identitas Pemohon</p>
                         <div class="col-12">
                             <div class="input-wrapper">
-                                <input autocomplete="off" class="input" type="text" id="nama_pemohon" required
+                                <input autocomplete="off" class="input" type="text" name="nik" id="nik" required
+                                    placeholder="nama pemohon" />
+                                <label class="label" for="nik">
+                                    NIK Pemohon <span class="text-danger">*</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="input-wrapper">
+                                <input autocomplete="off" class="input" type="text" name="nama_pemohon" id="nama_pemohon" required
                                     placeholder="nama pemohon" />
                                 <label class="label" for="nama_pemohon">
                                     Nama Pemohon <span class="text-danger">*</span>
@@ -52,7 +67,7 @@
                         </div>
                         <div class="col-12">
                             <div class="input-wrapper">
-                                <input autocomplete="off" class="input" type="text" id="alamat_pemohon" required
+                                <input autocomplete="off" class="input" type="text" name="alamat" id="alamat_pemohon" required
                                     placeholder="alamat pemohon" />
                                 <label class="label" for="alamat_pemohon">
                                     Alamat Pemohon <span class="text-danger">*</span>
@@ -61,7 +76,7 @@
                         </div>
                         <div class="col-12">
                             <div class="input-wrapper">
-                                <input autocomplete="off" class="input" type="text" id="pekerjaan" required
+                                <input autocomplete="off" class="input" type="text" name="pekerjaan" id="pekerjaan" required
                                     placeholder="Pekerjaan" />
                                 <label class="label" for="pekerjaan">
                                     Pekerjaan <span class="text-danger">*</span>
@@ -70,7 +85,7 @@
                         </div>
                         <div class="col-12 col-lg-6">
                             <div class="input-wrapper">
-                                <input autocomplete="off" class="input" type="tel" id="no_hp" required
+                                <input autocomplete="off" class="input" type="tel" name="no_hp" id="no_hp" required
                                     placeholder="No Telepon/HP" />
                                 <label class="label" for="no_hp">
                                     No Telepon/HP <span class="text-danger">*</span>
@@ -79,30 +94,10 @@
                         </div>
                         <div class="col-12 col-lg-6">
                             <div class="input-wrapper">
-                                <input autocomplete="off" class="input" type="email" id="email" required
+                                <input autocomplete="off" class="input" type="email" name="email" id="email" required
                                     placeholder="E-mail" />
                                 <label class="label" for="no_hp">
                                     E-mail <span class="text-danger">*</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-12 ">
-                            <div class="input-wrapper">
-                                <textarea required autocomplete="off" class="textarea" name="informasi_dibutuhkan" id="informasi_dibutuhkan"
-                                    placeholder="Informasi Yang Dibutuhkan"></textarea>
-                                <label class="label" for="informasi_dibutuhkan">
-                                    Informasi Yang Dibutuhkan
-                                    <span class="text-danger">*</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-12 ">
-                            <div class="input-wrapper">
-                                <textarea required autocomplete="off" class="textarea" name="alasan_informasi" id="alasan_informasi"
-                                    placeholder="Alasan Permintaan Informasi"></textarea>
-                                <label class="label" for="alasan_informasi">
-                                    Alasan Permintaan Informasi
-                                    <span class="text-danger">*</span>
                                 </label>
                             </div>
                         </div>
@@ -110,17 +105,17 @@
                             <p class="text-capitalize"> cara memperoleh informasi</p>
                             <div class="ps-4">
                                 <div class="form-check ">
-                                    <input class="form-check-input" type="radio" name="cara_memperoleh"
+                                    <input class="form-check-input" type="radio" name="memperoleh_info"
                                         id="langsung_cara_memperoleh" value="langsung" required>
                                     <label class="form-check-label" for="langsung_cara_memperoleh">Langsung</label>
                                 </div>
                                 <div class="form-check ">
-                                    <input class="form-check-input" type="radio" name="cara_memperoleh"
+                                    <input class="form-check-input" type="radio" name="memperoleh_info"
                                         id="email_cara_memperoleh" value="email">
                                     <label class="form-check-label" for="email_cara_memperoleh">Email</label>
                                 </div>
                                 <div class="form-check ">
-                                    <input class="form-check-input" type="radio" name="cara_memperoleh"
+                                    <input class="form-check-input" type="radio" name="memperoleh_info"
                                         id="whatsapp_cara_memperoleh" value="whatsapp">
                                     <label class="form-check-label" for="whatsapp_cara_memperoleh">Whatsapp</label>
                                 </div>
@@ -131,17 +126,17 @@
                             <p class="text-capitalize"> cara mengirimkan informasi</p>
                             <div class="ps-4">
                                 <div class="form-check ">
-                                    <input class="form-check-input" type="radio" name="cara_mengirimkan"
+                                    <input class="form-check-input" type="radio" name="mengirim_info"
                                         id="langsung_cara_mengirimkan" value="langsung" required>
                                     <label class="form-check-label" for="langsung_cara_mengirimkan">Langsung</label>
                                 </div>
                                 <div class="form-check ">
-                                    <input class="form-check-input" type="radio" name="cara_mengirimkan"
+                                    <input class="form-check-input" type="radio" name="mengirim_info"
                                         id="email_cara_mengirimkan" value="email">
                                     <label class="form-check-label" for="email_cara_mengirimkan">Email</label>
                                 </div>
                                 <div class="form-check ">
-                                    <input class="form-check-input" type="radio" name="cara_mengirimkan"
+                                    <input class="form-check-input" type="radio" name="mengirim_info"
                                         id="whatsapp_cara_mengirimkan" value="whatsapp">
                                     <label class="form-check-label" for="whatsapp_cara_mengirimkan">Whatsapp</label>
                                 </div>
@@ -152,7 +147,7 @@
                         <div class="col-12 text-white mt-3">
                             <label for="alasan" class="form-label text-white">Alasan Pengajuan Keberatan
                                 <span class="text-danger">*</span></label>
-                            <select class="form-select" name="alasan" aria-label="Default select example"
+                            <select class="form-select" name="alasan_keberatan" aria-label="Default select example"
                                 data-bs-theme="dark" required>
                                 <option selected hidden>Pilih Alasan Pengajuan Keberatan</option>
                                 <option value="1">Permohonan informasi ditolak</option>
@@ -177,7 +172,7 @@
                         <div class="col-12  my-3">
                             <label for="identitas" class="form-label text-white">Identitas(KTP/SIM) Ukuran maksimal 300kb
                                 <span class="text-danger">*</span></label>
-                            <input data-bs-theme="dark" class="form-control" type="file" id="identitas"
+                            <input data-bs-theme="dark" class="form-control" name="file_ktp" type="file" id="identitas"
                                 accept=".jpg,.png,.pdf">
                         </div>
                     </div>

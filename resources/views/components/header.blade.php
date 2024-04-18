@@ -3,6 +3,12 @@
         $permohonan = ['permohonan_informasi_online', 'permohonan_keberatan_online'];
     @endphp
     @section('header')
+    <script>
+        @if(session('error'))
+            alert('{{ session('error') }}');
+        @endif
+    </script>
+    
         <div class="offcanvas offcanvas-end text-bg-light" tabindex="-1" id="navbar"
             aria-labelledby="offcanvasDarkNavbarLabel">
             <div class="offcanvas-header">
@@ -12,10 +18,10 @@
             </div>
 
             <div class="offcanvas-body">
-                <form action="" class="text-end">
+                <form action="/search" method="GET" class="text-end">
                     <div class="input-group">
                         <input class="form-control border-end-0 border-dark rounded-start-pill bg-white floatingInput"
-                            type="text" placeholder="Cari Dokumen" id="searchbar-header">
+                            type="text" placeholder="Cari Dokumen" id="searchbar-header" name="search">
                         <span class="input-group-append">
                             <button class="btn btn-outline-dark rounded-end-pill border-dark border-start-0" type="submit">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -51,8 +57,8 @@
                             </li>
                             <li><a class="dropdown-item text-capitalize" href="#">DIDP PPID Utama</a></li>
                             <li><a class="dropdown-item text-capitalize" href="#">DIDP PPID Pembantu</a></li>
-                            <li><a class="dropdown-item text-capitalize" href="#">DIK PPID Kota
-                                    Tasikmalaya</a>
+                           <!-- <li><a class="dropdown-item text-capitalize" href="#">DIK PPID Kota
+                                    Tasikmalaya</a> -->
                             </li>
                         </ul>
                     </li>
@@ -98,10 +104,10 @@
                 </div>
 
                 {{-- search bar --}}
-                <form action="" class="d-none d-xxl-block col-4 align-self-center  text-center  ">
+                <form action="/search" method="GET" class="d-none d-xxl-block col-4 align-self-center  text-center  ">
                     <div class="input-group">
                         <input class="form-control border-end-0 border-dark rounded-start-pill bg-white floatingInput"
-                            type="text" placeholder="Cari Dokumen" id="searchbar-header">
+                            type="text" placeholder="Cari Dokumen" id="searchbar-header" name="search">
                         <span class="input-group-append">
                             <button class="btn btn-outline-dark  rounded-end-pill border-dark border-start-0"
                                 type="submit">
@@ -116,10 +122,10 @@
                 </form>
                 <div class="d-none  d-xxl-block col-md-auto col-12 mb-2 mb-md-0 ms-auto">
                     <ul class=" nav ">
-                        <li class="nav-item "><a href="/"
-                                class="nav-link px-2 link-header rounded-0 {{ request()->is('/') ? 'actived' : '' }}">Beranda</a>
+                        <li class="nav-item "><a href="{{ route('home') }}" class="nav-link px-2 link-header rounded-0 {{ request()->is('/') ? 'actived' : '' }}" onmouseover="playHoverSound('Beranda')">Beranda</a>
+
                         </li>
-                        <li class="nav-item dropdown"><a href="ppid-center" class="nav-link px-2 link-header rounded-0">PPID
+                        <li class="nav-item dropdown"><a href="{{ route('ppid.center') }}" class="nav-link px-2 link-header rounded-0">PPID
                                 Center</a>
                         </li>
                         <li class="nav-item dropdown">
@@ -128,14 +134,14 @@
                                 Informasi Publik
                             </a>
                             <ul class="dropdown-menu bg-white">
-                                <li><a class="dropdown-item text-capitalize" href="/berita">Berita</a></li>
-                                <li><a class="dropdown-item text-capitalize" href="/pengumuman">Pengumuman</a></li>
-                                <li><a class="dropdown-item text-capitalize" href="/informasi-berkala">Informasi berkala</a></li>
-                                <li><a class="dropdown-item text-capitalize" href="#">Informasi setiap saat</a></li>
-                                <li><a class="dropdown-item text-capitalize" href="#">Informasi serta merta</a></li>
-                                <li><a class="dropdown-item text-capitalize" href="#">DIDP PPID Utama</a></li>
-                                <li><a class="dropdown-item text-capitalize" href="#">DIDP PPID Pembantu</a></li>
-                                <li><a class="dropdown-item text-capitalize" href="#">DIK PPID Kota Tasikmalaya</a>
+                                <li><a class="dropdown-item text-capitalize" href="{{ route('berita') }}">Berita</a></li>
+                                <li><a class="dropdown-item text-capitalize" href="{{ route('pengumuman') }}">Pengumuman</a></li>
+                                <li><a class="dropdown-item text-capitalize" href="{{ route('informasi-berkala') }}">Informasi berkala</a></li>
+                                <li><a class="dropdown-item text-capitalize" href="{{ route('informasi-setiap-saat') }}">Informasi setiap saat</a></li>
+                                <li><a class="dropdown-item text-capitalize" href="{{ route('informasi-serta-merta') }}">Informasi serta merta</a></li>
+                                <li><a class="dropdown-item text-capitalize" href="{{ route('ppid.utama') }}">DIDP PPID Utama</a></li>
+                                <li><a class="dropdown-item text-capitalize" href="{{ route('ppid.pembantu') }}">DIDP PPID Pembantu</a></li>
+                                <li><a class="dropdown-item text-capitalize" href="{{ route('ppid.dik') }}">DIK PPID Kota Tasikmalaya</a>
                                 </li>
 
                             </ul>
@@ -146,19 +152,19 @@
                                 Permohonan informasi
                             </a>
                             <ul class="dropdown-menu bg-white">
-                                <li><a class="dropdown-item text-capitalize" href="#">Permohonan Informasi
+                                <li><a class="dropdown-item text-capitalize" href="{{ route('permohonan.informasi') }}">Permohonan Informasi
                                         Online</a>
                                 </li>
-                                <li><a class="dropdown-item text-capitalize" href="#">permohonan keberatan
+                                <li><a class="dropdown-item text-capitalize" href="{{ route('permohonan.keberatan') }}">permohonan keberatan
                                         online</a>
                                 </li>
                                 <li><a class="dropdown-item text-capitalize" href="#">formulir pelayanan permohonan
                                         informasi
                                         Offline</a></li>
-                                <li><a class="dropdown-item text-capitalize" href="/mekanisme_perolehan_informasi">mekanisme perolehan
+                                <li><a class="dropdown-item text-capitalize" href="{{ route('perolehan-informasi') }}">mekanisme perolehan
                                         informasi</a>
                                 </li>
-                                <li><a class="dropdown-item text-capitalize" href="/span-lapor">SP4N Lapor</a></li>
+                                <li><a class="dropdown-item text-capitalize" href="{{ route('span-lapor') }}">SP4N Lapor</a></li>
 
                             </ul>
                         </li>
@@ -181,4 +187,15 @@
 
 
         </header>
+        <script>
+            // Fungsi untuk memainkan suara saat menu difokuskan
+            function playHoverSound(text) {
+                // Buat elemen audio
+                var audio = new Audio();
+                // Set source audio ke URL data yang berisi suara yang di-generate secara dinamis
+                audio.src = 'data:audio/wav;base64,' + btoa(text);
+                // Putar suara
+                audio.play();
+            }
+        </script>
     @endsection
